@@ -32,8 +32,9 @@ html {
    position: fixed;
    left: 5%;
    top: 0;
-   flex-basis: 50rem;
+   min-height: 100vh;
    padding: 3rem;
+
 
 
    &__name {
@@ -243,6 +244,7 @@ html {
       position: relative;
       left: 0;
       top: 0;
+      min-height: auto;
       padding: 1rem;
 
       &__name {
