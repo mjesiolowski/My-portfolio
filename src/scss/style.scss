@@ -19,7 +19,7 @@ html {
 .wrapper {
    display: flex;
    justify-content: flex-end;
-   background: url('/images/bg3.jpg') no-repeat left fixed;
+   background: url('../images/bg3.jpg') no-repeat left fixed;
    background-size: cover;
 }
 
@@ -134,32 +134,32 @@ html {
       }
 
       &__A {
-         background: url('/images/thumb1.jpg') no-repeat top;
+         background: url('../images/thumb1.jpg') no-repeat top;
          background-size: cover;
       }
 
       &__B {
-         background: url('/images/thumb2.jpg') no-repeat top;
+         background: url('../images/thumb2.jpg') no-repeat top;
          background-size: cover;
       }
 
       &__C {
-         background: url('/images/thumb3.jpg') no-repeat top;
+         background: url('../images/thumb3.jpg') no-repeat top;
          background-size: cover;
       }
 
       &__D {
-         background: url('/images/thumb4.jpg') no-repeat top;
+         background: url('../images/thumb4.jpg') no-repeat top;
          background-size: cover;
       }
 
       &__E {
-         background: url('/images/thumb5.jpg') no-repeat top;
+         background: url('../images/thumb5.jpg') no-repeat top;
          background-size: cover;
       }
 
       &__F {
-         background: url('/images/thumb6.jpg') no-repeat top;
+         background: url('../images/thumb6.jpg') no-repeat top;
          background-size: cover;
       }
 
