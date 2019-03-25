@@ -1,16 +1,8 @@
 $transparentBlack: rgba(20, 20, 20, .85);
 $white: rgb(239, 232, 232);
-// $backgroundA: #5F5259;
-// $backgroundB: #417C8A;
-// $backgroundC: #9A915A;
-// $backgroundD: #637867;
-// $backgroundE: #7E7FA1;
-// $backgroundF: #A1824B;
-
 
 @mixin basicBoxStyle() {
    box-shadow: 0 0 6px 3px white;
    background-color: $transparentBlack;
-   // border-radius: 2%;
    color: $white;
 }

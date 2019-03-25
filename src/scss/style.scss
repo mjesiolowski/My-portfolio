@@ -1,8 +1,8 @@
 @import 'variables';
 
 * {
-   margin: 0;
    padding: 0;
+   margin: 0;
    box-sizing: border-box;
    font-family: 'Montserrat', Arial, sans-serif;
 }
@@ -10,21 +10,17 @@
 
 html {
    font-size: 62.5%;
-   scroll-behavior: smooth;
 }
 
 ::selection {
    background: #ccc;
 }
 
-
 .wrapper {
    display: flex;
-   flex-wrap: wrap;
    justify-content: flex-end;
    background: url('/images/bg3.jpg') no-repeat left fixed;
    background-size: cover;
-   // min-height: 100vh;
 }
 
 .intro {
@@ -37,23 +33,20 @@ html {
    left: 5%;
    top: 0;
    flex-basis: 50rem;
-   min-height: 100vh;
    padding: 3rem;
-
 
 
    &__name {
       @include basicBoxStyle();
-      box-shadow: none;
       padding: 1.5rem;
-      width: 45rem;
+      box-shadow: none;
       text-align: center;
       text-transform: uppercase;
 
       &__header {
+         margin-bottom: 1rem;
          font-size: 3rem;
          letter-spacing: .5rem;
-         margin-bottom: 1rem;
       }
 
       &__title {
@@ -65,20 +58,20 @@ html {
    &__about,
    &__skillSet,
    &__contact {
+      @include basicBoxStyle();
       width: 45rem;
       height: 23rem;
       padding: 1rem;
       margin: 1rem;
-      text-align: center;
-      @include basicBoxStyle();
       border: none;
+      text-align: center;
       letter-spacing: .17rem;
    }
 
    &__about__header,
    &__skillSet__header,
    &__contact__header {
-      padding-bottom: 1rem;
+      padding: 1rem 0 .2rem 0;
       font-size: 2.5rem;
       color: $white
    }
@@ -89,27 +82,35 @@ html {
    }
 
    &__about__text,
-   &__skillSet__text,
-   &__contact__text {
+   &__skillSet__text {
       padding: 1rem 0;
       font-size: 1.5rem;
+   }
+
+
+   &__contact__link {
+      display: inline-block;
+      padding: 2rem;
+      font-size: 6rem;
+      line-height: 10rem;
+      color: $white;
    }
 }
 
 .portfolio {
-   flex-basis: 70vw;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
    align-items: center;
+   flex-basis: 70vw;
    padding: 3rem;
 
    &__project {
+      @include basicBoxStyle();
       position: relative;
-      margin: 0 1.5rem 3rem 1.5rem;
       flex-basis: 80rem;
       height: 40rem;
-      @include basicBoxStyle();
+      margin: 0 1.5rem 3rem 1.5rem;
       border: none;
       text-align: center;
 
@@ -128,31 +129,26 @@ html {
          position: absolute;
          width: 100%;
          height: 100%;
-         background-color: transparent;
          transition: .3s;
       }
 
       &__A {
          background: url('/images/thumb1.jpg') no-repeat top;
-         // background-size: 100%;
          background-size: cover;
       }
 
       &__B {
          background: url('/images/thumb2.jpg') no-repeat top;
-         // background-size: 100%;
          background-size: cover;
       }
 
       &__C {
          background: url('/images/thumb3.jpg') no-repeat top;
-         // background-size: 100%;
          background-size: cover;
       }
 
       &__D {
          background: url('/images/thumb4.jpg') no-repeat top;
-         // background-size: 110%;
          background-size: cover;
       }
 
@@ -167,45 +163,42 @@ html {
       }
 
       &__header {
-         font-family: 'Special Elite', 'Monserrat', sans-serif;
-         opacity: 0;
          position: absolute;
-         color: black;
          top: 2%;
          left: 50%;
          width: 75%;
-         padding: .5rem;
-         text-align: center;
          transform: translateX(-50%);
-         font-size: 2rem;
-         transition: .5s;
+         padding: .5rem;
+         font-family: 'Special Elite', 'Monserrat', sans-serif;
          font-size: 4rem;
+         color: black;
+         text-align: center;
+         opacity: 0;
+         transition: .5s;
       }
 
       &__text {
-         font-family: 'Special Elite', 'Monserrat', sans-serif;
-         opacity: 0;
-         color: black;
          position: absolute;
          top: 20%;
          left: 50%;
          transform: translateX(-50%);
+         font-family: 'Special Elite', 'Monserrat', sans-serif;
          font-size: 2.5rem;
+         color: black;
+         opacity: 0;
       }
-
 
       &__previewButton,
       &__codeButton {
-         font-family: 'Special Elite', 'Monserrat', sans-serif;
-         opacity: 0;
-
-         background-color: transparent;
          width: 32%;
          line-height: 7rem;
-         font-size: 2.7rem;
          border: 2px solid $transparentBlack;
+         background-color: transparent;
+         font-family: 'Special Elite', 'Monserrat', sans-serif;
+         font-size: 2.7rem;
          text-transform: lowercase;
          letter-spacing: .4rem;
+         opacity: 0;
 
          &:hover {
             background-color: white;
@@ -251,13 +244,11 @@ html {
       left: 0;
       top: 0;
       padding: 1rem;
-      min-height: auto;
-
 
       &__name {
          flex-basis: 90vw;
-         text-align: center;
          margin: 0 auto;
+         text-align: center;
       }
    }
 }
@@ -268,9 +259,9 @@ html {
       padding: .5rem;
 
       &__name {
-         padding: .5rem;
-         width: 100%;
          flex-basis: 95vw;
+         width: 100%;
+         padding: .5rem;
 
          &__header {
             font-size: 2rem;
@@ -313,7 +304,7 @@ html {
 
    .portfolio__project {
       &__header {
-         font-size: 3rem;
+         font-size: 2.5rem;
       }
 
       &__text {
