@@ -157,11 +157,10 @@ html {
 
       &__header {
          position: absolute;
-         top: 2%;
+         top: 7%;
          left: 50%;
          width: 75%;
          transform: translateX(-50%);
-         padding: .5rem;
          font-family: 'Special Elite', 'Monserrat', sans-serif;
          font-size: 4rem;
          color: black;
@@ -170,7 +169,7 @@ html {
 
       &__text {
          position: absolute;
-         top: 20%;
+         top: 25%;
          left: 50%;
          transform: translateX(-50%);
          font-family: 'Special Elite', 'Monserrat', sans-serif;
@@ -203,6 +202,10 @@ html {
          bottom: 8%;
          left: 30%;
          transform: translateX(-50%);
+
+         &.center {
+            left: 50%;
+         }
       }
 
       &__codeButton {
@@ -214,7 +217,8 @@ html {
    }
 }
 
-@media (min-width: 500px) {
+
+@media (min-width: 850px) {
    .portfolio {
       &__project {
          &__background {
@@ -278,20 +282,23 @@ html {
          text-align: center;
       }
    }
+
+   .portfolio {
+      flex-basis: auto;
+   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 850px) {
 
    .intro {
       padding: .5rem;
 
       &__name {
          flex-basis: 95vw;
-         width: 100%;
          padding: .5rem;
 
          &__header {
-            font-size: 2rem;
+            font-size: 2.5rem;
             letter-spacing: .3rem;
          }
 
@@ -305,7 +312,7 @@ html {
       &__skillSet,
       &__contact {
          width: 100%;
-         height: 23rem;
+         height: auto;
          letter-spacing: .17rem;
       }
 
@@ -329,37 +336,44 @@ html {
       }
    }
 
-   .portfolio__project {
-      &__header {
-         visibility: hidden;
-         font-size: 2.5rem;
-      }
 
-      &__text {
-         visibility: hidden;
-         top: 20%;
-         font-size: 2rem;
-      }
+   .portfolio {
+      padding: .5rem;
+
+      &__project {
+         &__header {
+            visibility: hidden;
+            font-size: 2.5rem;
+         }
+
+         &__text {
+            visibility: hidden;
+            top: 20%;
+            font-size: 2rem;
+         }
 
 
-      &__previewButton,
-      &__codeButton {
-         visibility: hidden;
-         width: 75%;
-         line-height: 8rem;
-         background-color: white;
-      }
+         &__previewButton,
+         &__codeButton {
+            visibility: hidden;
+            width: 80%;
+            line-height: 8rem;
+            font-size: 2rem;
+            background-color: white;
+         }
 
-      &__previewButton {
-         bottom: 35%;
-         left: 50%;
-      }
+         &__previewButton {
+            bottom: 35%;
+            left: 50%;
+         }
 
-      &__codeButton {
-         right: 50%;
+         &__codeButton {
+            right: 50%;
+         }
       }
    }
 }
+
 
 .backgroundToggler {
    background-color: $white;

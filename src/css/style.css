@@ -115,18 +115,17 @@ html {
       background-size: cover; }
     .portfolio__project__header {
       position: absolute;
-      top: 2%;
+      top: 7%;
       left: 50%;
       width: 75%;
       transform: translateX(-50%);
-      padding: .5rem;
       font-family: 'Special Elite', 'Monserrat', sans-serif;
       font-size: 4rem;
       color: black;
       text-align: center; }
     .portfolio__project__text {
       position: absolute;
-      top: 20%;
+      top: 25%;
       left: 50%;
       transform: translateX(-50%);
       font-family: 'Special Elite', 'Monserrat', sans-serif;
@@ -152,13 +151,15 @@ html {
       bottom: 8%;
       left: 30%;
       transform: translateX(-50%); }
+      .portfolio__project__previewButton.center {
+        left: 50%; }
     .portfolio__project__codeButton {
       position: absolute;
       bottom: 8%;
       right: 30%;
       transform: translateX(50%); }
 
-@media (min-width: 500px) {
+@media (min-width: 850px) {
   .portfolio__project__background {
     transition: .5s; }
   .portfolio__project:hover .portfolio__project__background {
@@ -195,24 +196,25 @@ html {
     .intro__name {
       flex-basis: 90vw;
       margin: 0 auto;
-      text-align: center; } }
+      text-align: center; }
+  .portfolio {
+    flex-basis: auto; } }
 
-@media (max-width: 500px) {
+@media (max-width: 850px) {
   .intro {
     padding: .5rem; }
     .intro__name {
       flex-basis: 95vw;
-      width: 100%;
       padding: .5rem; }
       .intro__name__header {
-        font-size: 2rem;
+        font-size: 2.5rem;
         letter-spacing: .3rem; }
       .intro__name__title {
         font-size: 1.5rem;
         letter-spacing: .15rem; }
     .intro__about, .intro__skillSet, .intro__contact {
       width: 100%;
-      height: 23rem;
+      height: auto;
       letter-spacing: .17rem; }
     .intro__about__header, .intro__skillSet__header, .intro__contact__header {
       font-size: 2.2rem; }
@@ -222,23 +224,26 @@ html {
     .intro__about__text, .intro__skillSet__text, .intro__contact__text {
       padding: .5rem;
       font-size: 1.3rem; }
-  .portfolio__project__header {
-    visibility: hidden;
-    font-size: 2.5rem; }
-  .portfolio__project__text {
-    visibility: hidden;
-    top: 20%;
-    font-size: 2rem; }
-  .portfolio__project__previewButton, .portfolio__project__codeButton {
-    visibility: hidden;
-    width: 75%;
-    line-height: 8rem;
-    background-color: white; }
-  .portfolio__project__previewButton {
-    bottom: 35%;
-    left: 50%; }
-  .portfolio__project__codeButton {
-    right: 50%; } }
+  .portfolio {
+    padding: .5rem; }
+    .portfolio__project__header {
+      visibility: hidden;
+      font-size: 2.5rem; }
+    .portfolio__project__text {
+      visibility: hidden;
+      top: 20%;
+      font-size: 2rem; }
+    .portfolio__project__previewButton, .portfolio__project__codeButton {
+      visibility: hidden;
+      width: 80%;
+      line-height: 8rem;
+      font-size: 2rem;
+      background-color: white; }
+    .portfolio__project__previewButton {
+      bottom: 35%;
+      left: 50%; }
+    .portfolio__project__codeButton {
+      right: 50%; } }
 
 .backgroundToggler {
   background-color: #efe8e8; }
