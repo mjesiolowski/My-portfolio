@@ -65,10 +65,14 @@ html {
     font-size: 1.5rem; }
   .intro__contact__link {
     display: inline-block;
-    padding: 2rem;
+    margin: 2rem;
     font-size: 6rem;
     line-height: 10rem;
-    color: #efe8e8; }
+    color: #efe8e8;
+    transition: .1s; }
+    .intro__contact__link:hover {
+      transform: scale(1.1);
+      color: white; }
 
 .portfolio {
   display: flex;
@@ -87,18 +91,10 @@ html {
     margin: 0 1.5rem 3rem 1.5rem;
     border: none;
     text-align: center; }
-    .portfolio__project:hover .portfolio__project__background {
-      background-color: #efe8e8; }
-    .portfolio__project:hover .portfolio__project__header,
-    .portfolio__project:hover .portfolio__project__text,
-    .portfolio__project:hover .portfolio__project__previewButton,
-    .portfolio__project:hover .portfolio__project__codeButton {
-      opacity: 1; }
     .portfolio__project__background {
       position: absolute;
       width: 100%;
-      height: 100%;
-      transition: .3s; }
+      height: 100%; }
     .portfolio__project__A {
       background: url("../images/thumb1.jpg") no-repeat top;
       background-size: cover; }
@@ -127,9 +123,7 @@ html {
       font-family: 'Special Elite', 'Monserrat', sans-serif;
       font-size: 4rem;
       color: black;
-      text-align: center;
-      opacity: 0;
-      transition: .5s; }
+      text-align: center; }
     .portfolio__project__text {
       position: absolute;
       top: 20%;
@@ -137,8 +131,7 @@ html {
       transform: translateX(-50%);
       font-family: 'Special Elite', 'Monserrat', sans-serif;
       font-size: 2.5rem;
-      color: black;
-      opacity: 0; }
+      color: black; }
     .portfolio__project__previewButton, .portfolio__project__codeButton {
       width: 32%;
       line-height: 7rem;
@@ -147,11 +140,7 @@ html {
       font-family: 'Special Elite', 'Monserrat', sans-serif;
       font-size: 2.7rem;
       text-transform: lowercase;
-      letter-spacing: .4rem;
-      opacity: 0; }
-      .portfolio__project__previewButton:hover, .portfolio__project__codeButton:hover {
-        background-color: white;
-        transition: .3s; }
+      letter-spacing: .4rem; }
       .portfolio__project__previewButton__link, .portfolio__project__codeButton__link {
         display: block;
         padding: 0 2rem;
@@ -168,6 +157,29 @@ html {
       bottom: 8%;
       right: 30%;
       transform: translateX(50%); }
+
+@media (min-width: 500px) {
+  .portfolio__project__background {
+    transition: .5s; }
+  .portfolio__project:hover .portfolio__project__background {
+    background-color: #efe8e8; }
+  .portfolio__project:hover .portfolio__project__header,
+  .portfolio__project:hover .portfolio__project__text,
+  .portfolio__project:hover .portfolio__project__previewButton,
+  .portfolio__project:hover .portfolio__project__codeButton {
+    opacity: 1; }
+  .portfolio__project__header {
+    transition: .7s;
+    opacity: 0; }
+  .portfolio__project__text {
+    transition: .7s;
+    opacity: 0; }
+  .portfolio__project__previewButton, .portfolio__project__codeButton {
+    transition: .7s;
+    opacity: 0; }
+    .portfolio__project__previewButton:hover, .portfolio__project__codeButton:hover {
+      background-color: white;
+      transition: .2s; } }
 
 @media (max-height: 950px), (max-width: 1550px) {
   .wrapper {
@@ -211,15 +223,25 @@ html {
       padding: .5rem;
       font-size: 1.3rem; }
   .portfolio__project__header {
+    visibility: hidden;
     font-size: 2.5rem; }
   .portfolio__project__text {
-    top: 25%;
-    font-size: 2.2rem; }
+    visibility: hidden;
+    top: 20%;
+    font-size: 2rem; }
   .portfolio__project__previewButton, .portfolio__project__codeButton {
+    visibility: hidden;
     width: 75%;
-    line-height: 8rem; }
+    line-height: 8rem;
+    background-color: white; }
   .portfolio__project__previewButton {
     bottom: 35%;
     left: 50%; }
   .portfolio__project__codeButton {
     right: 50%; } }
+
+.backgroundToggler {
+  background-color: #efe8e8; }
+
+.visibilityToggler {
+  visibility: visible; }

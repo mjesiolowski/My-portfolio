@@ -35,8 +35,6 @@ html {
    min-height: 100vh;
    padding: 3rem;
 
-
-
    &__name {
       @include basicBoxStyle();
       padding: 1.5rem;
@@ -91,10 +89,16 @@ html {
 
    &__contact__link {
       display: inline-block;
-      padding: 2rem;
+      margin: 2rem;
       font-size: 6rem;
       line-height: 10rem;
       color: $white;
+      transition: .1s;
+
+      &:hover {
+         transform: scale(1.1);
+         color: white;
+      }
    }
 }
 
@@ -115,22 +119,10 @@ html {
       border: none;
       text-align: center;
 
-      &:hover &__background {
-         background-color: $white;
-      }
-
-      &:hover &__header,
-      &:hover &__text,
-      &:hover &__previewButton,
-      &:hover &__codeButton {
-         opacity: 1;
-      }
-
       &__background {
          position: absolute;
          width: 100%;
          height: 100%;
-         transition: .3s;
       }
 
       &__A {
@@ -174,8 +166,6 @@ html {
          font-size: 4rem;
          color: black;
          text-align: center;
-         opacity: 0;
-         transition: .5s;
       }
 
       &__text {
@@ -186,7 +176,6 @@ html {
          font-family: 'Special Elite', 'Monserrat', sans-serif;
          font-size: 2.5rem;
          color: black;
-         opacity: 0;
       }
 
       &__previewButton,
@@ -199,12 +188,6 @@ html {
          font-size: 2.7rem;
          text-transform: lowercase;
          letter-spacing: .4rem;
-         opacity: 0;
-
-         &:hover {
-            background-color: white;
-            transition: .3s;
-         }
 
          &__link {
             display: block;
@@ -227,6 +210,48 @@ html {
          bottom: 8%;
          right: 30%;
          transform: translateX(50%);
+      }
+   }
+}
+
+@media (min-width: 500px) {
+   .portfolio {
+      &__project {
+         &__background {
+            transition: .5s;
+         }
+
+         &:hover &__background {
+            background-color: $white;
+         }
+
+         &:hover &__header,
+         &:hover &__text,
+         &:hover &__previewButton,
+         &:hover &__codeButton {
+            opacity: 1;
+         }
+
+         &__header {
+            transition: .7s;
+            opacity: 0;
+         }
+
+         &__text {
+            transition: .7s;
+            opacity: 0;
+         }
+
+         &__previewButton,
+         &__codeButton {
+            transition: .7s;
+            opacity: 0;
+
+            &:hover {
+               background-color: white;
+               transition: .2s;
+            }
+         }
       }
    }
 }
@@ -306,19 +331,23 @@ html {
 
    .portfolio__project {
       &__header {
+         visibility: hidden;
          font-size: 2.5rem;
       }
 
       &__text {
-         top: 25%;
-         font-size: 2.2rem;
+         visibility: hidden;
+         top: 20%;
+         font-size: 2rem;
       }
 
 
       &__previewButton,
       &__codeButton {
+         visibility: hidden;
          width: 75%;
          line-height: 8rem;
+         background-color: white;
       }
 
       &__previewButton {
@@ -330,4 +359,12 @@ html {
          right: 50%;
       }
    }
+}
+
+.backgroundToggler {
+   background-color: $white;
+}
+
+.visibilityToggler {
+   visibility: visible;
 }
