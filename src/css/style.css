@@ -102,7 +102,7 @@ html {
       background: url("../images/thumb2.jpg") no-repeat top;
       background-size: cover; }
     .portfolio__project__C {
-      background: url("../images/thumb3.jpg") no-repeat top;
+      background: url("../images/thumb3.jpg") no-repeat center;
       background-size: cover; }
     .portfolio__project__D {
       background: url("../images/thumb4.jpg") no-repeat top;
@@ -131,29 +131,27 @@ html {
       font-family: 'Special Elite', 'Monserrat', sans-serif;
       font-size: 2.5rem;
       color: black; }
-    .portfolio__project__previewButton, .portfolio__project__codeButton {
+    .portfolio__project__previewLink, .portfolio__project__codeLink {
+      display: block;
       width: 32%;
       line-height: 7rem;
+      padding: 0 2rem;
       border: 2px solid rgba(20, 20, 20, 0.85);
       background-color: transparent;
       font-family: 'Special Elite', 'Monserrat', sans-serif;
       font-size: 2.7rem;
       text-transform: lowercase;
-      letter-spacing: .4rem; }
-      .portfolio__project__previewButton__link, .portfolio__project__codeButton__link {
-        display: block;
-        padding: 0 2rem;
-        font-family: 'Special Elite', 'Monserrat', sans-serif;
-        color: black;
-        text-decoration: none; }
-    .portfolio__project__previewButton {
+      letter-spacing: .4rem;
+      color: black;
+      text-decoration: none; }
+    .portfolio__project__previewLink {
       position: absolute;
       bottom: 8%;
       left: 30%;
       transform: translateX(-50%); }
-      .portfolio__project__previewButton.center {
+      .portfolio__project__previewLink.center {
         left: 50%; }
-    .portfolio__project__codeButton {
+    .portfolio__project__codeLink {
       position: absolute;
       bottom: 8%;
       right: 30%;
@@ -166,8 +164,8 @@ html {
     background-color: #efe8e8; }
   .portfolio__project:hover .portfolio__project__header,
   .portfolio__project:hover .portfolio__project__text,
-  .portfolio__project:hover .portfolio__project__previewButton,
-  .portfolio__project:hover .portfolio__project__codeButton {
+  .portfolio__project:hover .portfolio__project__previewLink,
+  .portfolio__project:hover .portfolio__project__codeLink {
     opacity: 1; }
   .portfolio__project__header {
     transition: .7s;
@@ -175,10 +173,10 @@ html {
   .portfolio__project__text {
     transition: .7s;
     opacity: 0; }
-  .portfolio__project__previewButton, .portfolio__project__codeButton {
+  .portfolio__project__previewLink, .portfolio__project__codeLink {
     transition: .7s;
     opacity: 0; }
-    .portfolio__project__previewButton:hover, .portfolio__project__codeButton:hover {
+    .portfolio__project__previewLink:hover, .portfolio__project__codeLink:hover {
       background-color: white;
       transition: .2s; } }
 
@@ -233,16 +231,16 @@ html {
       visibility: hidden;
       top: 20%;
       font-size: 2rem; }
-    .portfolio__project__previewButton, .portfolio__project__codeButton {
+    .portfolio__project__previewLink, .portfolio__project__codeLink {
       visibility: hidden;
       width: 80%;
       line-height: 8rem;
       font-size: 2rem;
       background-color: white; }
-    .portfolio__project__previewButton {
+    .portfolio__project__previewLink {
       bottom: 35%;
       left: 50%; }
-    .portfolio__project__codeButton {
+    .portfolio__project__codeLink {
       right: 50%; } }
 
 .backgroundToggler {

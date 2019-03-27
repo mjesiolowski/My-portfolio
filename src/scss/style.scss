@@ -136,7 +136,7 @@ html {
       }
 
       &__C {
-         background: url('../images/thumb3.jpg') no-repeat top;
+         background: url('../images/thumb3.jpg') no-repeat center;
          background-size: cover;
       }
 
@@ -177,27 +177,23 @@ html {
          color: black;
       }
 
-      &__previewButton,
-      &__codeButton {
+      &__previewLink,
+      &__codeLink {
+         display: block;
          width: 32%;
          line-height: 7rem;
+         padding: 0 2rem;
          border: 2px solid $transparentBlack;
          background-color: transparent;
          font-family: 'Special Elite', 'Monserrat', sans-serif;
          font-size: 2.7rem;
          text-transform: lowercase;
          letter-spacing: .4rem;
-
-         &__link {
-            display: block;
-            padding: 0 2rem;
-            font-family: 'Special Elite', 'Monserrat', sans-serif;
-            color: black;
-            text-decoration: none;
-         }
+         color: black;
+         text-decoration: none;
       }
 
-      &__previewButton {
+      &__previewLink {
          position: absolute;
          bottom: 8%;
          left: 30%;
@@ -208,7 +204,7 @@ html {
          }
       }
 
-      &__codeButton {
+      &__codeLink {
          position: absolute;
          bottom: 8%;
          right: 30%;
@@ -231,8 +227,8 @@ html {
 
          &:hover &__header,
          &:hover &__text,
-         &:hover &__previewButton,
-         &:hover &__codeButton {
+         &:hover &__previewLink,
+         &:hover &__codeLink {
             opacity: 1;
          }
 
@@ -246,8 +242,8 @@ html {
             opacity: 0;
          }
 
-         &__previewButton,
-         &__codeButton {
+         &__previewLink,
+         &__codeLink {
             transition: .7s;
             opacity: 0;
 
@@ -353,8 +349,8 @@ html {
          }
 
 
-         &__previewButton,
-         &__codeButton {
+         &__previewLink,
+         &__codeLink {
             visibility: hidden;
             width: 80%;
             line-height: 8rem;
@@ -362,12 +358,12 @@ html {
             background-color: white;
          }
 
-         &__previewButton {
+         &__previewLink {
             bottom: 35%;
             left: 50%;
          }
 
-         &__codeButton {
+         &__codeLink {
             right: 50%;
          }
       }
