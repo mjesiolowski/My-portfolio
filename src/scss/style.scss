@@ -119,12 +119,6 @@ html {
       border: none;
       text-align: center;
 
-      &__background {
-         position: absolute;
-         width: 100%;
-         height: 100%;
-      }
-
       &__A {
          background: url('../images/thumb1.jpg') no-repeat top;
          background-size: cover;
@@ -155,12 +149,17 @@ html {
          background-size: cover;
       }
 
-      &__header {
+      &__background {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-evenly;
+         align-items: center;
          position: absolute;
-         top: 7%;
-         left: 50%;
-         width: 75%;
-         transform: translateX(-50%);
+         width: 100%;
+         height: 100%;
+      }
+
+      &__header {
          font-family: 'Special Elite', 'Monserrat', sans-serif;
          font-size: 4rem;
          color: black;
@@ -168,10 +167,7 @@ html {
       }
 
       &__text {
-         position: absolute;
-         top: 25%;
-         left: 50%;
-         transform: translateX(-50%);
+         flex-basis: 75%;
          font-family: 'Special Elite', 'Monserrat', sans-serif;
          font-size: 2.5rem;
          color: black;
@@ -180,9 +176,8 @@ html {
       &__previewLink,
       &__codeLink {
          display: block;
-         width: 32%;
-         line-height: 7rem;
-         padding: 0 2rem;
+         flex-basis: 35%;
+         padding: 2.5rem 4rem;
          border: 2px solid $transparentBlack;
          background-color: transparent;
          font-family: 'Special Elite', 'Monserrat', sans-serif;
@@ -191,24 +186,6 @@ html {
          letter-spacing: .4rem;
          color: black;
          text-decoration: none;
-      }
-
-      &__previewLink {
-         position: absolute;
-         bottom: 8%;
-         left: 30%;
-         transform: translateX(-50%);
-
-         &.center {
-            left: 50%;
-         }
-      }
-
-      &__codeLink {
-         position: absolute;
-         bottom: 8%;
-         right: 30%;
-         transform: translateX(50%);
       }
    }
 }
@@ -339,32 +316,19 @@ html {
       &__project {
          &__header {
             visibility: hidden;
-            font-size: 2.5rem;
          }
 
          &__text {
             visibility: hidden;
-            top: 20%;
-            font-size: 2rem;
          }
 
 
          &__previewLink,
          &__codeLink {
             visibility: hidden;
-            width: 80%;
-            line-height: 8rem;
-            font-size: 2rem;
+            flex-basis: 65%;
+            padding: 3rem 5rem;
             background-color: white;
-         }
-
-         &__previewLink {
-            bottom: 35%;
-            left: 50%;
-         }
-
-         &__codeLink {
-            right: 50%;
          }
       }
    }
