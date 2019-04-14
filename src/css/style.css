@@ -13,6 +13,7 @@ html {
 .wrapper {
   display: flex;
   justify-content: flex-end;
+  min-width: 32rem;
   background: url("../images/bg3.jpg") no-repeat left fixed;
   background-size: cover; }
 
@@ -23,10 +24,10 @@ html {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  left: 5%;
+  left: 2%;
   top: 0;
   min-height: 100vh;
-  padding: 3rem; }
+  padding: 2rem; }
   .intro__name {
     box-shadow: 0 0 6px 3px white;
     background-color: rgba(20, 20, 20, 0.85);
@@ -43,31 +44,49 @@ html {
       font-size: 1.8rem;
       letter-spacing: .2rem; }
   .intro__about, .intro__skillSet, .intro__contact {
+    display: flex;
+    flex-wrap: wrap;
     box-shadow: 0 0 6px 3px white;
     background-color: rgba(20, 20, 20, 0.85);
     color: #efe8e8;
-    width: 45rem;
-    height: 23rem;
+    width: 50rem;
+    min-width: 30rem;
+    height: 27rem;
     padding: 1rem;
-    margin: 1rem;
+    margin: .9rem;
     border: none;
     text-align: center;
     letter-spacing: .17rem; }
+  .intro__about {
+    align-items: center;
+    justify-content: space-evenly; }
+    .intro__about__image {
+      width: 38%; }
+    .intro__about__content {
+      flex-basis: 62%; }
+  .intro__skillSet {
+    flex-direction: column;
+    justify-content: space-evenly; }
   .intro__about__header, .intro__skillSet__header, .intro__contact__header {
     padding: 1rem 0 .2rem 0;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     color: #efe8e8; }
+  .intro__contact__header {
+    flex-basis: 100%; }
   .intro__skillSet__subheader {
     padding: 1rem 0 0 0;
-    font-size: 1.8rem; }
-  .intro__about__text, .intro__skillSet__text {
-    padding: 1rem 0;
-    font-size: 1.5rem; }
+    font-size: 2rem; }
+  .intro__about__text, .intro__skillSet__text, .intro__contact__text {
+    padding: 1.5rem;
+    font-size: 1.6rem; }
+  .intro__contact__section {
+    display: flex;
+    align-items: center;
+    flex-basis: 100%; }
   .intro__contact__link {
-    display: inline-block;
-    margin: 2rem;
-    font-size: 6rem;
-    line-height: 10rem;
+    margin: 0 1.5rem;
+    font-size: 4rem;
+    width: 5rem;
     color: #efe8e8;
     transition: .1s; }
     .intro__contact__link:hover {
@@ -87,6 +106,7 @@ html {
     color: #efe8e8;
     position: relative;
     flex-basis: 80rem;
+    min-width: 30rem;
     height: 40rem;
     margin: 0 1.5rem 3rem 1.5rem;
     border: none;
@@ -193,10 +213,6 @@ html {
       .intro__name__title {
         font-size: 1.5rem;
         letter-spacing: .15rem; }
-    .intro__about, .intro__skillSet, .intro__contact {
-      width: 100%;
-      height: auto;
-      letter-spacing: .17rem; }
     .intro__about__header, .intro__skillSet__header, .intro__contact__header {
       font-size: 2.2rem; }
     .intro__skillSet__subheader {
@@ -205,17 +221,27 @@ html {
     .intro__about__text, .intro__skillSet__text, .intro__contact__text {
       padding: .5rem;
       font-size: 1.3rem; }
+    .intro__contact__link {
+      margin: 0;
+      font-size: 3rem; }
+    .intro__contact__text {
+      padding: 0 0 0 .5rem;
+      font-size: 1.1rem; }
   .portfolio {
     padding: .5rem; }
-    .portfolio__project__header {
-      visibility: hidden; }
-    .portfolio__project__text {
-      visibility: hidden; }
-    .portfolio__project__previewLink, .portfolio__project__codeLink {
-      visibility: hidden;
-      flex-basis: 65%;
-      padding: 3rem 5rem;
-      background-color: white; } }
+    .portfolio__project {
+      margin: 1rem .9rem; }
+      .portfolio__project__header {
+        font-size: 2.5rem;
+        visibility: hidden; }
+      .portfolio__project__text {
+        font-size: 1.7rem;
+        visibility: hidden; }
+      .portfolio__project__previewLink, .portfolio__project__codeLink {
+        visibility: hidden;
+        flex-basis: 65%;
+        padding: 2rem 4rem;
+        background-color: white; } }
 
 .backgroundToggler {
   background-color: #efe8e8; }

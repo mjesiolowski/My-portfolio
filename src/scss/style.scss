@@ -19,6 +19,7 @@ html {
 .wrapper {
    display: flex;
    justify-content: flex-end;
+   min-width: 32rem;
    background: url('../images/bg3.jpg') no-repeat left fixed;
    background-size: cover;
 }
@@ -30,10 +31,10 @@ html {
    justify-content: space-between;
    align-items: center;
    position: fixed;
-   left: 5%;
+   left: 2%;
    top: 0;
    min-height: 100vh;
-   padding: 3rem;
+   padding: 2rem;
 
    &__name {
       @include basicBoxStyle();
@@ -57,41 +58,71 @@ html {
    &__about,
    &__skillSet,
    &__contact {
+      display: flex;
+      flex-wrap: wrap;
       @include basicBoxStyle();
-      width: 45rem;
-      height: 23rem;
+      width: 50rem;
+      min-width: 30rem;
+      height: 27rem;
       padding: 1rem;
-      margin: 1rem;
+      margin: .9rem;
       border: none;
       text-align: center;
       letter-spacing: .17rem;
+   }
+
+   &__about {
+      align-items: center;
+      justify-content: space-evenly;
+
+      &__image {
+         width: 38%;
+      }
+
+      &__content {
+         flex-basis: 62%;
+      }
+   }
+
+   &__skillSet {
+      flex-direction: column;
+      justify-content: space-evenly;
    }
 
    &__about__header,
    &__skillSet__header,
    &__contact__header {
       padding: 1rem 0 .2rem 0;
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       color: $white
+   }
+
+   &__contact__header {
+      flex-basis: 100%
    }
 
    &__skillSet__subheader {
       padding: 1rem 0 0 0;
-      font-size: 1.8rem;
+      font-size: 2rem;
    }
 
    &__about__text,
-   &__skillSet__text {
-      padding: 1rem 0;
-      font-size: 1.5rem;
+   &__skillSet__text,
+   &__contact__text {
+      padding: 1.5rem;
+      font-size: 1.6rem;
    }
 
+   &__contact__section {
+      display: flex;
+      align-items: center;
+      flex-basis: 100%;
+   }
 
    &__contact__link {
-      display: inline-block;
-      margin: 2rem;
-      font-size: 6rem;
-      line-height: 10rem;
+      margin: 0 1.5rem;
+      font-size: 4rem;
+      width: 5rem;
       color: $white;
       transition: .1s;
 
@@ -114,6 +145,7 @@ html {
       @include basicBoxStyle();
       position: relative;
       flex-basis: 80rem;
+      min-width: 30rem;
       height: 40rem;
       margin: 0 1.5rem 3rem 1.5rem;
       border: none;
@@ -284,16 +316,14 @@ html {
       &__about,
       &__skillSet,
       &__contact {
-         width: 100%;
-         height: auto;
-         letter-spacing: .17rem;
+         // width: 100%;
+         // height: auto;
       }
 
       &__about__header,
       &__skillSet__header,
       &__contact__header {
          font-size: 2.2rem;
-
       }
 
       &__skillSet__subheader {
@@ -307,6 +337,17 @@ html {
          padding: .5rem;
          font-size: 1.3rem;
       }
+
+      &__contact__link {
+         margin: 0;
+         font-size: 3rem;
+      }
+
+      &__contact__text {
+         padding: 0 0 0 .5rem;
+         // word-break: break-all;
+         font-size: 1.1rem;
+      }
    }
 
 
@@ -314,11 +355,15 @@ html {
       padding: .5rem;
 
       &__project {
+         margin: 1rem .9rem;
+
          &__header {
+            font-size: 2.5rem;
             visibility: hidden;
          }
 
          &__text {
+            font-size: 1.7rem;
             visibility: hidden;
          }
 
@@ -327,13 +372,12 @@ html {
          &__codeLink {
             visibility: hidden;
             flex-basis: 65%;
-            padding: 3rem 5rem;
+            padding: 2rem 4rem;
             background-color: white;
          }
       }
    }
 }
-
 
 .backgroundToggler {
    background-color: $white;
