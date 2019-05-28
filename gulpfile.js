@@ -40,10 +40,15 @@ gulp.task('distImages', () =>
    .pipe(gulp.dest('dist/images'))
 );
 
+gulp.task('distFonts', () =>
+   gulp.src('src/fonts/*')
+   .pipe(gulp.dest('dist/fonts'))
+);
+
 gulp.task('autoprefixer', () =>
    gulp.src('src/css/style.css')
    .pipe(autoprefixer({
-      browsers: ["last 3 versions", "> 2%"],
+      browsers: ["last 5 versions", "> 1%"],
       cascade: false
    }))
    .pipe(gulp.dest('dist/css'))
@@ -57,6 +62,6 @@ gulp.task('nano', function () {
       .pipe(gulp.dest('dist/css/'));
 });
 
-gulp.task("build", (gulp.series('distHTML', 'distJS', 'distImages', 'autoprefixer', 'nano')));
+gulp.task("build", (gulp.series('distHTML', 'distJS', 'distImages', 'distFonts', 'autoprefixer', 'nano')));
 
 gulp.task("default", (gulp.series("serve")));
