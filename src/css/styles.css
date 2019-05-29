@@ -100,17 +100,17 @@ html {
       margin: 4rem auto 0 auto;
       list-style: none; }
     .intro__contact__link {
-      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4rem;
       font-size: 1.9rem;
       color: #efe8e8;
       text-decoration: none;
       transition: .3s; }
       .intro__contact__link:hover {
         color: white; }
-    .intro__contact__item {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 2rem; }
+    .intro__contact__text {
+      margin-top: 2rem; }
     .intro__contact__icon {
       font-size: 7rem; }
 

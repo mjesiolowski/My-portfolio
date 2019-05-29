@@ -143,7 +143,9 @@ html {
       }
 
       &__link {
-         margin-bottom: 2rem;
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 4rem;
          font-size: 1.9rem;
          color: $white;
          text-decoration: none;
@@ -154,10 +156,8 @@ html {
          }
       }
 
-      &__item {
-         display: flex;
-         flex-direction: column;
-         margin-bottom: 2rem;
+      &__text {
+         margin-top: 2rem;
       }
 
       &__icon {
