@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Special Elite';
+  src: url("../fonts/SpecialElite-Regular.ttf") format("truetype"); }
+
 * {
   padding: 0;
   margin: 0;
@@ -13,16 +21,16 @@ html {
 .wrapper {
   display: flex;
   flex-wrap: wrap;
-  min-width: 32rem;
   background: url("../images/bg3.jpg") no-repeat left fixed;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
 
 .intro {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  padding: 0 2rem; }
+  padding: 0 3rem; }
   .intro__name {
     box-shadow: 0 0 6px 3px white;
     background-color: rgba(20, 20, 20, 0.95);
@@ -46,9 +54,8 @@ html {
     background-color: rgba(20, 20, 20, 0.95);
     color: #efe8e8;
     flex-basis: 65%;
-    min-width: 30rem;
     padding: 2rem 7rem 3rem 7rem;
-    margin: .9rem;
+    margin: .9rem 0;
     text-align: center;
     letter-spacing: .17rem; }
   .intro__about {
@@ -56,6 +63,17 @@ html {
     .intro__about__image {
       margin: 0 auto;
       width: 25rem; }
+    .intro__about__text {
+      margin-top: 3rem;
+      font-size: 1.9rem;
+      line-height: 1.4; }
+  .intro__about__header, .intro__skillSet__header, .intro__contact__header {
+    padding: 3rem 0 2rem 0;
+    margin: 0 auto;
+    border-bottom: 1px solid #efe8e8;
+    width: 50%;
+    font-size: 3.3rem;
+    color: #efe8e8; }
   .intro__skillSet {
     flex-direction: column;
     align-items: center; }
@@ -95,33 +113,32 @@ html {
       margin-bottom: 2rem; }
     .intro__contact__icon {
       font-size: 7rem; }
-  .intro__about__header, .intro__skillSet__header, .intro__contact__header {
-    padding: 3rem 0 2rem 0;
-    margin: 0 auto;
-    border-bottom: 1px solid #efe8e8;
-    width: 50%;
-    font-size: 3.3rem;
-    color: #efe8e8; }
-  .intro__about__text {
-    margin-top: 3rem;
-    font-size: 1.9rem;
-    line-height: 1.4; }
 
 .portfolio {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  flex-basis: 100vw;
   padding: 3rem; }
+  .portfolio__header {
+    flex-basis: 100%;
+    font-size: 3rem;
+    letter-spacing: .5rem;
+    color: #efe8e8;
+    padding: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(20, 20, 20, 0.95); }
   .portfolio__project {
     box-shadow: 0 0 6px 3px white;
     background-color: rgba(20, 20, 20, 0.95);
     color: #efe8e8;
     position: relative;
-    flex-basis: 80rem;
     min-width: 30rem;
-    height: 40rem;
-    margin: 0 1.5rem 3rem 1.5rem;
+    flex-basis: 45%;
+    height: 50rem;
+    margin: 3rem;
     border: none;
     text-align: center; }
     .portfolio__project__A {
@@ -153,31 +170,31 @@ html {
     .portfolio__project__header {
       font-family: 'Special Elite', 'Monserrat', sans-serif;
       font-size: 4rem;
-      color: black;
+      color: #efe8e8;
       text-align: center; }
     .portfolio__project__text {
       flex-basis: 75%;
       font-family: 'Special Elite', 'Monserrat', sans-serif;
       font-size: 2.5rem;
-      color: black; }
+      color: #efe8e8; }
     .portfolio__project__previewLink, .portfolio__project__codeLink {
       display: block;
       flex-basis: 35%;
       padding: 2.5rem 4rem;
-      border: 2px solid rgba(20, 20, 20, 0.95);
+      border: 2px solid #efe8e8;
       background-color: transparent;
       font-family: 'Special Elite', 'Monserrat', sans-serif;
       font-size: 2.7rem;
       text-transform: lowercase;
       letter-spacing: .4rem;
-      color: black;
+      color: #efe8e8;
       text-decoration: none; }
 
 @media (min-width: 850px) {
   .portfolio__project__background {
     transition: .5s; }
   .portfolio__project:hover .portfolio__project__background {
-    background-color: #efe8e8; }
+    background-color: rgba(20, 20, 20, 0.95); }
   .portfolio__project:hover .portfolio__project__header,
   .portfolio__project:hover .portfolio__project__text,
   .portfolio__project:hover .portfolio__project__previewLink,
@@ -194,10 +211,64 @@ html {
     opacity: 0; }
     .portfolio__project__previewLink:hover, .portfolio__project__codeLink:hover {
       background-color: white;
-      transition: .2s; } }
+      transition: .2s;
+      color: rgba(20, 20, 20, 0.95); } }
 
-.backgroundToggler {
-  background-color: #efe8e8; }
+@media (max-width: 1300px) {
+  .intro__about, .intro__skillSet, .intro__contact {
+    flex-basis: 85%; }
+  .portfolio__project {
+    flex-basis: 85%; } }
 
-.visibilityToggler {
-  visibility: visible; }
+@media (max-width: 1300px) and (max-width: 850px) {
+  .intro {
+    padding: 1rem; }
+    .intro__name__header {
+      font-size: 2.5rem; }
+    .intro__name__title {
+      font-size: 1.6rem; }
+    .intro__about, .intro__skillSet, .intro__contact {
+      flex-basis: 100%;
+      padding: 1.5rem; }
+      .intro__about__header, .intro__skillSet__header, .intro__contact__header {
+        width: 75%; }
+    .intro__about__image {
+      width: 15rem; }
+    .intro__skillSet__subheader {
+      font-size: 2.0rem; }
+    .intro__skillSet__list {
+      margin-top: 3rem; }
+    .intro__skillSet__item {
+      flex-basis: 15rem; }
+    .intro__skillSet__icon {
+      font-size: 5rem; }
+    .intro__skillSet__text {
+      padding: 2rem;
+      font-size: 1.6rem; }
+    .intro__contact__link {
+      font-size: 1.4rem; }
+    .intro__contact__icon {
+      font-size: 5rem; }
+    .intro__about__header, .intro__skillSet__header, .intro__contact__header {
+      font-size: 2.5rem; }
+    .intro__about__text {
+      font-size: 1.6rem; }
+  .portfolio {
+    padding: 0; }
+    .portfolio__project {
+      margin: 1rem;
+      flex-basis: 100%; }
+      .portfolio__project__header {
+        font-size: 2.7rem;
+        visibility: hidden; }
+      .portfolio__project__text {
+        font-size: 2rem;
+        visibility: hidden; }
+      .portfolio__project__previewLink, .portfolio__project__codeLink {
+        visibility: hidden; } }
+
+@media (max-width: 1300px) {
+  .backgroundToggler {
+    background-color: rgba(20, 20, 20, 0.95); }
+  .visibilityToggler {
+    visibility: visible; } }

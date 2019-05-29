@@ -46,16 +46,16 @@ gulp.task('distFonts', () =>
 );
 
 gulp.task('autoprefixer', () =>
-   gulp.src('src/css/style.css')
+   gulp.src('src/css/styles.css')
    .pipe(autoprefixer({
-      browsers: ["last 5 versions", "> 1%"],
+      browsers: ["last 7 versions", "> .5%"],
       cascade: false
    }))
    .pipe(gulp.dest('dist/css'))
 );
 
 gulp.task('nano', function () {
-   return gulp.src('dist/css/style.css')
+   return gulp.src('dist/css/styles.css')
       .pipe(sourcemaps.init())
       .pipe(cssnano())
       .pipe(sourcemaps.write('.'))
