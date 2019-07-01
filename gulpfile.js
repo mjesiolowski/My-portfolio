@@ -1,9 +1,12 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var cssnano = require('gulp-cssnano');
-var sourcemaps = require('gulp-sourcemaps');
+let gulp = require('gulp');
+let browserSync = require('browser-sync').create();
+let sass = require('gulp-sass');
+let autoprefixer = require('gulp-autoprefixer');
+// let cssnano = require('gulp-cssnano');
+let babel = require('gulp-babel');
+let cleanCSS = require('gulp-clean-css');
+let sourcemaps = require('gulp-sourcemaps');
+
 
 gulp.task('sass', function () {
    return gulp.src('src/scss/*.scss')
@@ -24,44 +27,46 @@ gulp.task('serve', gulp.series('sass', function () {
 }));
 
 
-
 gulp.task('distHTML', () =>
    gulp.src('src/index.html')
-   .pipe(gulp.dest('dist/'))
+      .pipe(gulp.dest('public/'))
 );
 
-gulp.task('distJS', () =>
-   gulp.src('src/js/main.js')
-   .pipe(gulp.dest('dist/js'))
+gulp.task('distJS', () => gulp.src(
+   [
+      'node_modules/babel-polyfill/dist/polyfill.js',
+      'src/js/*.js'
+   ])
+   .pipe(babel({ presets: ['@babel/preset-env'] }))
+   .pipe(gulp.dest('public/js'))
 );
 
 gulp.task('distImages', () =>
    gulp.src('src/images/*')
-   .pipe(gulp.dest('dist/images'))
+      .pipe(gulp.dest('public/images'))
 );
 
 gulp.task('distFonts', () =>
    gulp.src('src/fonts/*')
-   .pipe(gulp.dest('dist/fonts'))
+      .pipe(gulp.dest('public/fonts'))
 );
 
 gulp.task('autoprefixer', () =>
    gulp.src('src/css/styles.css')
-   .pipe(autoprefixer({
-      browsers: ["last 7 versions", "> .5%"],
-      cascade: false
-   }))
-   .pipe(gulp.dest('dist/css'))
+      .pipe(autoprefixer({
+         cascade: false
+      }))
+      .pipe(gulp.dest('public/css'))
 );
 
-gulp.task('nano', function () {
-   return gulp.src('dist/css/styles.css')
+gulp.task('minify-css', () => {
+   return gulp.src('public/css/styles.css')
       .pipe(sourcemaps.init())
-      .pipe(cssnano())
+      .pipe(cleanCSS())
       .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('dist/css/'));
+      .pipe(gulp.dest('public/css'));
 });
 
-gulp.task("build", (gulp.series('distHTML', 'distJS', 'distImages', 'distFonts', 'autoprefixer', 'nano')));
+gulp.task("build", (gulp.series('distHTML', 'distJS', 'distImages', 'distFonts', 'autoprefixer', 'minify-css')));
 
 gulp.task("default", (gulp.series("serve")));
