@@ -1,0 +1,4 @@
+.body-wrapper {
+   @include flexbox(flex-start, center);
+   overflow: hidden;
+}

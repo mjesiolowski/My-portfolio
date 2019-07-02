@@ -1,0 +1,9 @@
+.header {
+   @include flexbox(center);
+   background-color: $transparent-black;
+   text-align: center;
+   flex-basis: 100%;
+   margin: $s-size $s-size 0 $s-size;
+   min-height: 10rem;
+   padding: 0 $l-size;
+}

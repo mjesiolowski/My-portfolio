@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #aaa;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: url('../../images/bg3.jpg') no-repeat center fixed;
+  background-size: cover;
+}

@@ -1,0 +1,35 @@
+.projects {
+   // background-color: forestgreen;
+   @include flexbox(center, space-around);
+   margin: $s-size $s-size 0 $s-size;
+
+   @media (min-width: $tablet-breakpoint) {
+      padding: $m-size;
+   }
+}
+
+.projects__container {
+   flex-basis: 100%;
+   min-height: 45rem;
+
+   @media (min-width: $tablet-breakpoint) {
+      flex-basis: 40%;
+   }
+}
+
+.projects__header {
+   flex-basis: 55%;
+}
+
+.projects__text {
+   flex-basis: 100%;
+}
+
+.projects__link {
+   flex-basis: 90%;
+   margin: $m-size;
+
+   @media (min-width: $desktop-breakpoint) {
+      flex-basis: 35%;
+   }
+}

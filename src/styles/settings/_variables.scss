@@ -1,0 +1,34 @@
+// Mixins
+@mixin basicBoxStyle() {
+   background-color: $transparent-black;
+   box-shadow: 0 0 6px 3px white;
+   color: $white;
+}
+
+@mixin flexbox($align: flex-start, $justify: flex-start) {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: $align;
+   justify-content: $justify
+}
+
+// Colors
+$transparent-black: rgba(20, 20, 20, .95);
+$white: rgb(239, 232, 232);
+
+// Font Size
+$font-size-xxl: 7.0rem;
+$font-size-xl: 3.0rem;
+$font-size-l: 2.4rem;
+$font-size-m: 1.8rem;
+$font-size-s: 1.4rem;
+
+// Spacing
+$xl-size: 20.0rem;
+$l-size: 3.2rem;
+$m-size: 1.6rem;
+$s-size: 1.2rem;
+
+// Breakpoints
+$tablet-breakpoint: 65rem;
+$desktop-breakpoint: 100rem;
