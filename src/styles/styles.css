@@ -314,16 +314,16 @@ html {
 
 body {
   font-family: 'Montserrat', Arial, sans-serif;
-  background: url("../../images/bg3.jpg") no-repeat center fixed;
+  background: url("../images/bg3.jpg") no-repeat center fixed;
   background-size: cover; }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url("../../fonts/Montserrat-Regular.ttf") format("truetype"); }
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Special Elite';
-  src: url("../../fonts/SpecialElite-Regular.ttf") format("truetype"); }
+  src: url("../fonts/SpecialElite-Regular.ttf") format("truetype"); }
 
 .body-wrapper {
   display: flex;
@@ -514,23 +514,30 @@ body {
   width: 100%; }
   @media (min-width: 1000px) {
     .projects__background {
-      transition: .2s; } }
+      transition: .5s; } }
 
 .projects__header {
   flex-basis: 55%; }
+  @media (min-width: 1000px) {
+    .projects__header {
+      transition: .2s; } }
 
 .projects__text {
   flex-basis: 100%; }
+  @media (min-width: 1000px) {
+    .projects__text {
+      transition: .2s; } }
 
 .projects__link {
   flex-basis: 90%;
   margin: 1.6rem; }
   @media (min-width: 1000px) {
     .projects__link {
-      flex-basis: 35%; } }
+      flex-basis: 35%;
+      transition: .2s; } }
 
 .project-A {
-  background: url("../../images/thumb1.jpg") no-repeat top;
+  background: url("../images/thumb1.jpg") no-repeat top;
   background-size: cover;
   position: relative; }
   @media (min-width: 1000px) {
@@ -546,7 +553,7 @@ body {
       background-color: rgba(20, 20, 20, 0.95); } }
 
 .project-B {
-  background: url("../../images/thumb2.jpg") no-repeat top;
+  background: url("../images/thumb2.jpg") no-repeat top;
   background-size: cover;
   position: relative; }
   @media (min-width: 1000px) {
@@ -562,7 +569,7 @@ body {
       background-color: rgba(20, 20, 20, 0.95); } }
 
 .project-C {
-  background: url("../../images/thumb3.jpg") no-repeat center;
+  background: url("../images/thumb3.jpg") no-repeat center;
   background-size: cover;
   position: relative; }
   @media (min-width: 1000px) {
@@ -578,7 +585,7 @@ body {
       background-color: rgba(20, 20, 20, 0.95); } }
 
 .project-D {
-  background: url("../../images/thumb4.jpg") no-repeat top;
+  background: url("../images/thumb4.jpg") no-repeat top;
   background-size: cover;
   position: relative; }
   @media (min-width: 1000px) {
@@ -594,7 +601,7 @@ body {
       background-color: rgba(20, 20, 20, 0.95); } }
 
 .project-E {
-  background: url("../../images/thumb5.jpg") no-repeat top;
+  background: url("../images/thumb5.jpg") no-repeat top;
   background-size: cover;
   position: relative; }
   @media (min-width: 1000px) {

@@ -29,16 +29,24 @@
    width: 100%;
 
    @media (min-width: $desktop-breakpoint) {
-      transition: .2s;
+      transition: .5s;
    }
 }
 
 .projects__header {
    flex-basis: 55%;
+
+   @media (min-width: $desktop-breakpoint) {
+      transition: .2s;
+   }
 }
 
 .projects__text {
    flex-basis: 100%;
+
+   @media (min-width: $desktop-breakpoint) {
+      transition: .2s;
+   }
 }
 
 .projects__link {
@@ -47,11 +55,12 @@
 
    @media (min-width: $desktop-breakpoint) {
       flex-basis: 35%;
+      transition: .2s;
    }
 }
 
 .project-A {
-   background: url('../../images/thumb1.jpg') no-repeat top;
+   background: url('../images/thumb1.jpg') no-repeat top;
    background-size: cover;
    position: relative;
 
@@ -59,7 +68,7 @@
 }
 
 .project-B {
-   background: url('../../images/thumb2.jpg') no-repeat top;
+   background: url('../images/thumb2.jpg') no-repeat top;
    background-size: cover;
    position: relative;
 
@@ -67,7 +76,7 @@
 }
 
 .project-C {
-   background: url('../../images/thumb3.jpg') no-repeat center;
+   background: url('../images/thumb3.jpg') no-repeat center;
    background-size: cover;
    position: relative;
 
@@ -75,7 +84,7 @@
 }
 
 .project-D {
-   background: url('../../images/thumb4.jpg') no-repeat top;
+   background: url('../images/thumb4.jpg') no-repeat top;
    background-size: cover;
    position: relative;
 
@@ -83,7 +92,7 @@
 }
 
 .project-E {
-   background: url('../../images/thumb5.jpg') no-repeat top;
+   background: url('../images/thumb5.jpg') no-repeat top;
    background-size: cover;
    position: relative;
 

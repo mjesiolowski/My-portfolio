@@ -10,7 +10,7 @@ let sourcemaps = require('gulp-sourcemaps');
 gulp.task('sass', function () {
    return gulp.src('src/**/*.scss')
       .pipe(sass())
-      .pipe(gulp.dest("src/css"))
+      .pipe(gulp.dest("src/"))
       .pipe(browserSync.stream());
 });
 
@@ -51,19 +51,19 @@ gulp.task('distFonts', () =>
 );
 
 gulp.task('autoprefixer', () =>
-   gulp.src('src/css/styles.css')
+   gulp.src('src/styles/styles.css')
       .pipe(autoprefixer({
          cascade: false
       }))
-      .pipe(gulp.dest('public/css'))
+      .pipe(gulp.dest('public/styles'))
 );
 
 gulp.task('minify-css', () => {
-   return gulp.src('public/css/styles.css')
+   return gulp.src('public/styles/styles.css')
       .pipe(sourcemaps.init())
       .pipe(cleanCSS())
       .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('public/css'));
+      .pipe(gulp.dest('public/styles'));
 });
 
 gulp.task("build", (gulp.series('distHTML', 'distJS', 'distImages', 'distFonts', 'autoprefixer', 'minify-css')));
