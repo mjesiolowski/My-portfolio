@@ -12,6 +12,30 @@
    justify-content: $justify
 }
 
+@mixin project-hover() {
+   @media (min-width: $desktop-breakpoint) {
+      &:hover {
+         background-color: $transparent-black;
+      }
+
+      &:hover .projects__header {
+         opacity: 1;
+      }
+
+      &:hover .projects__text {
+         opacity: 1;
+      }
+
+      &:hover .projects__link {
+         opacity: 1;
+      }
+
+      &:hover .projects__background {
+         background-color: $transparent-black;
+      }
+   }
+}
+
 // Colors
 $transparent-black: rgba(20, 20, 20, .95);
 $white: rgb(239, 232, 232);
@@ -21,7 +45,7 @@ $font-size-xxl: 7.0rem;
 $font-size-xl: 3.0rem;
 $font-size-l: 2.4rem;
 $font-size-m: 1.8rem;
-$font-size-s: 1.4rem;
+$font-size-s: 1.5rem;
 
 // Spacing
 $xl-size: 20.0rem;
@@ -30,5 +54,5 @@ $m-size: 1.6rem;
 $s-size: 1.2rem;
 
 // Breakpoints
-$tablet-breakpoint: 65rem;
-$desktop-breakpoint: 100rem;
+$tablet-breakpoint: 650px;
+$desktop-breakpoint: 1000px;

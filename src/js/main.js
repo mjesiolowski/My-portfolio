@@ -1,10 +1,19 @@
-const portfolioProject = [...document.querySelectorAll('.portfolio__project')]
+const Portfolio = {
+   init() {
+      this.desktopBreakpoint = 1000
+      this.projects = document.querySelectorAll('.projects__container')
 
-portfolioProject.forEach(project => (
-   project.addEventListener('click', (e) => {
-      if (window.innerWidth < 650 && e.target.nodeName != 'A') {
-         const bcgChildren = [...e.target.children]
-         bcgChildren.forEach(child => child.classList.toggle('visibilityToggler'))
-         e.target.classList.toggle('backgroundToggler')
+      this.toggleVisibility = (e) => {
+         if (window.innerWidth < this.desktopBreakpoint && e.target.nodeName === 'DIV') {
+            const children = [...e.target.children]
+            children.forEach(child => child.classList.toggle('not-visible'))
+            e.target.classList.toggle('backgroundToggler')
+         }
       }
-   })))s
+
+      this.projects.forEach(project => project.addEventListener('click', this.toggleVisibility))
+   }
+}
+
+
+Portfolio.init()

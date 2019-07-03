@@ -5,4 +5,12 @@
    padding: $l-size;
    text-decoration: none;
    width: 20rem;
+
+   @media (min-width: $desktop-breakpoint) {
+      &:hover {
+         color: $transparent-black;
+         background-color: $white;
+      }
+   }
+
 }

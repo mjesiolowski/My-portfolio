@@ -2,7 +2,7 @@
    @include flexbox(center, space-around);
    margin: 0 $s-size $s-size $s-size;
 
-   @media (min-width: $tablet-breakpoint) {
+   @media (min-width: $desktop-breakpoint) {
       padding: $m-size;
    }
 }
@@ -10,11 +10,10 @@
 .intro__container {
    flex-basis: 100%;
 
-   @media (min-width: $tablet-breakpoint) {
+   @media (min-width: $desktop-breakpoint) {
       flex-basis: 60%;
    }
 }
-
 
 .intro__photo {
    flex-basis: 100%;
@@ -23,17 +22,10 @@
 .intro__header {
    flex-basis: 55%;
 
-   @media (min-width: $tablet-breakpoint) {
+   @media (min-width: $desktop-breakpoint) {
       flex-basis: 35%;
    }
 }
-
-// .intro__text {
-//    font-size: $font-size-m;
-//    letter-spacing: .12rem;
-//    line-height: 1.25;
-//    text-align: center;
-// }
 
 .intro__list {
    @include flexbox(flex-start, center);
@@ -50,15 +42,13 @@
    @media (min-width: $tablet-breakpoint) {
       flex-basis: 25%;
    }
+}
 
-   &--link {
-      border: 1px solid $white;
-      flex-basis: 50%;
-      padding: $m-size;
+.intro__item--link {
+   border: 1px solid $white;
 
-      &:hover {
-         background-color: $transparent-black;
-      }
+   @media (min-width: $tablet-breakpoint) {
+      flex-basis: 70%;
    }
 }
 
@@ -74,5 +64,15 @@
 .intro__link {
    @include flexbox(flex-start, center);
    color: $white;
+   padding: $m-size;
    text-decoration: none;
+   transition: .2s;
+
+   @media (min-width: $tablet-breakpoint) {
+      &:hover {
+         color: $transparent-black;
+         background-color: $white;
+
+      }
+   }
 }

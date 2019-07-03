@@ -1,6 +1,10 @@
 .section-text {
-   font-size: $font-size-m;
+   font-size: $font-size-s;
    letter-spacing: .12rem;
    line-height: 1.25;
    text-align: center;
+
+   @media (min-width: $tablet-breakpoint) {
+      font-size: $font-size-m;
+   }
 }

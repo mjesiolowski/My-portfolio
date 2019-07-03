@@ -1,7 +1,7 @@
 .projects {
-   // background-color: forestgreen;
-   @include flexbox(center, space-around);
+   @include flexbox(center, space-evenly);
    margin: $s-size $s-size 0 $s-size;
+   flex-basis: 100%;
 
    @media (min-width: $tablet-breakpoint) {
       padding: $m-size;
@@ -10,10 +10,26 @@
 
 .projects__container {
    flex-basis: 100%;
-   min-height: 45rem;
+   padding: 0;
+   position: relative;
 
-   @media (min-width: $tablet-breakpoint) {
-      flex-basis: 40%;
+   @media (min-width: $desktop-breakpoint) {
+      flex-basis: 45%;
+   }
+}
+
+.projects__background {
+   @include flexbox(center, space-evenly);
+   height: 100%;
+   left: 0;
+   min-height: 55rem;
+   padding: $l-size;
+   position: relative;
+   top: 0;
+   width: 100%;
+
+   @media (min-width: $desktop-breakpoint) {
+      transition: .2s;
    }
 }
 
@@ -32,4 +48,44 @@
    @media (min-width: $desktop-breakpoint) {
       flex-basis: 35%;
    }
+}
+
+.project-A {
+   background: url('../../images/thumb1.jpg') no-repeat top;
+   background-size: cover;
+   position: relative;
+
+   @include project-hover()
+}
+
+.project-B {
+   background: url('../../images/thumb2.jpg') no-repeat top;
+   background-size: cover;
+   position: relative;
+
+   @include project-hover()
+}
+
+.project-C {
+   background: url('../../images/thumb3.jpg') no-repeat center;
+   background-size: cover;
+   position: relative;
+
+   @include project-hover()
+}
+
+.project-D {
+   background: url('../../images/thumb4.jpg') no-repeat top;
+   background-size: cover;
+   position: relative;
+
+   @include project-hover()
+}
+
+.project-E {
+   background: url('../../images/thumb5.jpg') no-repeat top;
+   background-size: cover;
+   position: relative;
+
+   @include project-hover()
 }

@@ -1,0 +1,13 @@
+.not-visible {
+   visibility: hidden;
+
+   @media (min-width: $desktop-breakpoint) {
+      visibility: visible;
+      opacity: 0;
+   }
+
+}
+
+.backgroundToggler {
+   background-color: $transparent-black;
+}
