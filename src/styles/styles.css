@@ -413,6 +413,22 @@ body {
 .backgroundToggler {
   background-color: rgba(20, 20, 20, 0.95); }
 
+.nav-arrow {
+  background-color: rgba(20, 20, 20, 0.95);
+  box-shadow: 0 0 6px 3px white;
+  color: #efe8e8;
+  bottom: 5px;
+  font-size: 3rem;
+  padding: 1.2rem;
+  position: fixed;
+  right: 5px;
+  transition: .2s; }
+  @media (min-width: 1000px) {
+    .nav-arrow:hover {
+      background-color: #efe8e8;
+      box-shadow: 0 0 6px 3px rgba(20, 20, 20, 0.95);
+      color: rgba(20, 20, 20, 0.95); } }
+
 .intro {
   display: flex;
   flex-wrap: wrap;
@@ -485,7 +501,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 1.2rem 1.2rem 0 1.2rem;
   flex-basis: 100%; }
   @media (min-width: 650px) {
@@ -511,13 +527,14 @@ body {
   padding: 3.2rem;
   position: relative;
   top: 0;
-  width: 100%; }
+  flex-basis: 100%; }
   @media (min-width: 1000px) {
     .projects__background {
       transition: .5s; } }
 
 .projects__header {
-  flex-basis: 55%; }
+  flex-basis: 55%;
+  margin: 0 auto; }
   @media (min-width: 1000px) {
     .projects__header {
       transition: .2s; } }
@@ -615,3 +632,16 @@ body {
       opacity: 1; }
     .project-E:hover .projects__background {
       background-color: rgba(20, 20, 20, 0.95); } }
+
+.footer {
+  background-color: black;
+  color: #efe8e8;
+  letter-spacing: .1rem;
+  line-height: 3vh;
+  min-height: 3vh;
+  text-align: center;
+  width: 100vw; }
+
+.footer__link {
+  color: #efe8e8;
+  text-decoration: none; }

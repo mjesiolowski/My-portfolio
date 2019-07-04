@@ -1,5 +1,5 @@
 .projects {
-   @include flexbox(center, space-evenly);
+   @include flexbox(center, space-around);
    margin: $s-size $s-size 0 $s-size;
    flex-basis: 100%;
 
@@ -26,7 +26,7 @@
    padding: $l-size;
    position: relative;
    top: 0;
-   width: 100%;
+   flex-basis: 100%;
 
    @media (min-width: $desktop-breakpoint) {
       transition: .5s;
@@ -35,6 +35,7 @@
 
 .projects__header {
    flex-basis: 55%;
+   margin: 0 auto;
 
    @media (min-width: $desktop-breakpoint) {
       transition: .2s;

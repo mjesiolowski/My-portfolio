@@ -1,0 +1,14 @@
+.footer {
+   background-color: black;
+   color: $white;
+   letter-spacing: .1rem;
+   line-height: 3vh;
+   min-height: 3vh;
+   text-align: center;
+   width: 100vw;
+}
+
+.footer__link {
+   color: $white;
+   text-decoration: none;
+}
