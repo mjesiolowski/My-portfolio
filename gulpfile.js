@@ -1,71 +1,97 @@
-let gulp = require('gulp');
-let browserSync = require('browser-sync').create();
-let sass = require('gulp-sass');
-let autoprefixer = require('gulp-autoprefixer');
-let babel = require('gulp-babel');
-let cleanCSS = require('gulp-clean-css');
-let sourcemaps = require('gulp-sourcemaps');
+const { watch, src, dest, series, parallel } = require('gulp');
+const browserSync = require('browser-sync').create();
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const del = require('del');
+const postcss = require('gulp-postcss');
+const sass = require('gulp-sass');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
+const config = {
+   src: {
+      js: [
+         'node_modules/babel-polyfill/dist/polyfill.js',
+         'src/**/*.js'
+      ],
+      scss: 'src/**/*.scss',
+      fonts: 'src/fonts/*',
+      images: 'src/images/*',
+      html: 'src/*.html'
+   },
+   public: {
+      base: 'public/',
+      scripts: 'public/scripts',
+      fonts: 'public/fonts',
+      images: 'public/images'
+   }
+}
 
-gulp.task('sass', function () {
-   return gulp.src('src/**/*.scss')
-      .pipe(sass())
-      .pipe(gulp.dest("src/"))
-      .pipe(browserSync.stream());
-});
-
-gulp.task('serve', gulp.series('sass', function () {
-
-   browserSync.init({
-      server: "./src"
-   });
-
-   gulp.watch('src/**/*.scss', gulp.series('sass'));
-   gulp.watch("src/*.html").on('change', browserSync.reload);
-   gulp.watch("src/js/*.js").on('change', browserSync.reload);
-}));
-
-
-gulp.task('distHTML', () =>
-   gulp.src('src/index.html')
-      .pipe(gulp.dest('public/'))
-);
-
-gulp.task('distJS', () => gulp.src(
-   [
-      'node_modules/babel-polyfill/dist/polyfill.js',
-      'src/js/*.js'
-   ])
-   .pipe(babel({ presets: ['@babel/preset-env'] }))
-   .pipe(gulp.dest('public/js'))
-);
-
-gulp.task('distImages', () =>
-   gulp.src('src/images/*')
-      .pipe(gulp.dest('public/images'))
-);
-
-gulp.task('distFonts', () =>
-   gulp.src('src/fonts/*')
-      .pipe(gulp.dest('public/fonts'))
-);
-
-gulp.task('autoprefixer', () =>
-   gulp.src('src/styles/styles.css')
-      .pipe(autoprefixer({
-         cascade: false
+function jsTask(done) {
+   src(config.src.js)
+      .pipe(babel({
+         presets: ['@babel/preset-env']
       }))
-      .pipe(gulp.dest('public/styles'))
-);
+      .pipe(concat('main.bundle.js'))
+      .pipe(uglify())
+      .pipe(dest(config.public.scripts))
+   done();
+}
 
-gulp.task('minify-css', () => {
-   return gulp.src('public/styles/styles.css')
-      .pipe(sourcemaps.init())
-      .pipe(cleanCSS())
-      .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('public/styles'));
-});
+function cssTask(done) {
+   src(config.src.scss)
+      .pipe(sass({ outputStyle: 'expanded' }))
+      .pipe(rename({ suffix: '.bundle' }))
+      .pipe(postcss([autoprefixer(), cssnano()]))
+      .pipe(dest(config.public.base))
+   done();
+}
 
-gulp.task("build", (gulp.series('distHTML', 'distJS', 'distImages', 'distFonts', 'autoprefixer', 'minify-css')));
+function fontTask(done) {
+   src(config.src.fonts)
+      .pipe(dest(config.public.fonts))
+   done();
+}
 
-gulp.task("default", (gulp.series("serve")));
+function imagesTask(done) {
+   src(config.src.images)
+      .pipe(dest(config.public.images))
+   done();
+}
+
+function htmlTask(done) {
+   src(config.src.html)
+      .pipe(dest(config.public.base))
+   done();
+}
+
+function watchFiles() {
+   watch(config.src.js, series(jsTask, reload));
+   watch(config.src.scss, series(cssTask, reload));
+   watch(config.src.fonts, series(fontTask, reload));
+   watch(config.src.images, series(imagesTask, reload));
+   watch(config.src.html, series(htmlTask, reload));
+}
+
+function liveReload(done) {
+   browserSync.init({
+      server: {
+         baseDir: config.public.base
+      },
+   });
+   done();
+}
+
+function reload(done) {
+   browserSync.reload();
+   done();
+}
+
+function cleanUp() {
+   return del([config.public.base]);
+}
+
+exports.dev = parallel(jsTask, cssTask, fontTask, imagesTask, htmlTask, watchFiles, liveReload);
+exports.build = series(cleanUp, parallel(jsTask, cssTask, fontTask, imagesTask, htmlTask));
