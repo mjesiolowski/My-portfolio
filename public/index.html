@@ -82,8 +82,12 @@
                   <p class="intro__text section-text">node.js + Express (basics)<p>
                </li>
                <li class="intro__item">
+                  <i class="fas fa-database intro__icon"></i>
+                  <p class="intro__text section-text">MongoDB + Mongoose (basics)<p>
+               </li>
+               <li class="intro__item">
                   <i class="fab fa-bootstrap intro__icon"></i>
-                  <p class="intro__text section-text">Bootstrap (basiscs)</p>
+                  <p class="intro__text section-text">Bootstrap (basics)</p>
                </li>
             </ul>
 
@@ -91,10 +95,6 @@
             <h3 class="intro__header section-header">Next goals</h3>
 
             <ul class="intro__list">
-               <li class="intro__item">
-                  <i class="fas fa-database intro__icon"></i>
-                  <p class="intro__text section-text">MongoDB<p>
-               </li>
                <li class="intro__item">
                   <i class="fab fa-react intro__icon"></i>
                   <p class="intro__text section-text">Gatsby<p>
@@ -123,7 +123,7 @@
                <li class="intro__item intro__item--link">
                   <a class="intro__link" href="https://linkedin.com/in/maciej-jesiolowski" target="_blank"
                      rel="noopener" arial-label="navigate to author's LinkedIn profile"><i
-                        class="fab fa-linkedin intro__icon intro__icon--link"></i><span
+                        class="fab fa-linkedin-in intro__icon intro__icon--link"></i><span
                         class="intro__text section-text">linkedin.com/in/maciej-jesiolowski</span></a>
                </li>
 
@@ -141,20 +141,23 @@
       <section class="projects">
          <div class="projects__container container project-A">
             <div class="projects__background">
-               <h3 class="projects__header section-header not-visible">Wedding Dress Salon</h3>
-               <p class="projects__text section-text not-visible">This is my first commercial project, it presents the
-                  offer of an
-                  exclusive wedding dress salon. My goal was to make this website readable, easy to navigate,
-                  eye-catching, consistent and fully responsive.
+               <h3 class="projects__header section-header not-visible">HSP Quiz</h3>
+               <p class="projects__text section-text not-visible">The HSP Quiz website is meant to get you acquainted
+                  with a
+                  Highly Sensitive Person background. My goal was to contribute to the growth of the HSP issue
+                  awareness.
                </p>
-               <p class="projects__text section-text not-visible">Technology: SASS + BEM | JS | Gulp
+               <p class="projects__text section-text not-visible">The biggest challenge: my first attempt to build
+                  a front-end + back-end app, private routing, quiz logic, modifiable content.
                </p>
-               <a class="projects__link button not-visible" href="https://nataliq.pl" target="_blank" rel="noopener"
-                  aria-label="navigate to the project preview">Preview</a>
-               <a class="projects__link button not-visible" href="https://github.com/mjesiolowski/salon" target="_blank"
-                  rel="noopener" aria-label="navigate to the project source code">Code</a>
+               <p class="projects__text section-text not-visible">Technology: React (with React Router and React Hooks),
+                  Redux, SASS + BEM, Node.js (Express), MongoDB (Mongoose), Webpack, Heroku platform
+               </p>
+               <a class="projects__link button not-visible" href="https://mj-hsp.herokuapp.com" target="_blank"
+                  rel="noopener" aria-label="navigate to the project preview">Preview</a>
+               <a class="projects__link button not-visible" href="https://github.com/mjesiolowski/HSP-Quiz"
+                  target="_blank" rel="noopener" aria-label="navigate to the project source code">Code</a>
             </div>
-
          </div>
 
          <div class="projects__container container project-B">
@@ -177,10 +180,28 @@
                <a class="projects__link button not-visible" href="https://github.com/mjesiolowski/React-ToDoApp"
                   target="_blank" rel="noopener" aria-label="navigate to the project source code">Code</a>
             </div>
-
          </div>
 
          <div class="projects__container container project-C">
+            <div class="projects__background">
+               <h3 class="projects__header section-header not-visible">Wedding Dress Salon</h3>
+               <p class="projects__text section-text not-visible">This is my first commercial project, it presents the
+                  offer of an
+                  exclusive wedding dress salon. My goal was to make this website readable, easy to navigate,
+                  eye-catching, consistent and fully responsive.
+               </p>
+               <p class="projects__text section-text not-visible">Technology: SASS + BEM | JS | Gulp
+               </p>
+               <a class="projects__link button not-visible" href="https://nataliq.pl" target="_blank" rel="noopener"
+                  aria-label="navigate to the project preview">Preview</a>
+               <a class="projects__link button not-visible" href="https://github.com/mjesiolowski/salon" target="_blank"
+                  rel="noopener" aria-label="navigate to the project source code">Code</a>
+            </div>
+         </div>
+
+
+
+         <div class="projects__container container project-D">
             <div class="projects__background">
                <h3 class="projects__header section-header not-visible">Battleships game</h3>
                <p class="projects__text section-text not-visible">Battleships game based on objected JS and Flexbox.</p>
@@ -194,21 +215,26 @@
             </div>
          </div>
 
-         <div class="projects__container container project-D">
+         <div class="projects__container container project-E">
             <div class="projects__background">
-               <h3 class="projects__header section-header not-visible">Rock-paper-scissors</h3>
-               <p class="projects__text section-text not-visible">Rock-paper-scissors game based on vanilla JS.</p>
-               <p class="projects__text section-text not-visible">Technology: HTTML5, CSS, vanilla JS, RWD
+               <h3 class="projects__header section-header not-visible">Rock-Paper-Scissors</h3>
+               <p class="projects__text section-text not-visible">This project shows how to use basics of JavaScript to
+                  create a simple point-and-click game by interacting with document object model. To make the game
+                  efficient and simple I divided the code logic into two main parts: the player choice and the computer
+                  choice. The core of the logic is based on if statements, loops and setTimeout callback. The data is
+                  kept in local storage.</p>
+               <p class="projects__text section-text not-visible">Technology: HTTML5, SASS + BEM, JavaScript, Gulp
                </p>
-               <a class="projects__link button not-visible" href="https://mjesiolowski.github.io/rockPaperScissors/"
-                  target="_blank" rel="noopener" aria-label="navigate to the project preview">Preview</a>
-               <a class="projects__link button not-visible" href="https://github.com/mjesiolowski/rockPaperScissors"
+               <a class="projects__link button not-visible"
+                  href="https://www.mjesiolowski.pl/projects/rock-paper-scissors/" target="_blank" rel="noopener"
+                  aria-label="navigate to the project preview">Preview</a>
+               <a class="projects__link button not-visible" href="https://github.com/mjesiolowski/Rock-paper-scissors"
                   target="_blank" rel="noopener" aria-label="navigate to the project source code">Code</a>
 
             </div>
          </div>
 
-         <div class="projects__container container project-E">
+         <div class="projects__container container project-F">
             <div class="projects__background">
                <h3 class="projects__header section-header not-visible">5* Hotel & Spa</h3>
                <p class="projects__text section-text not-visible">Bootstrap template with a slider, forms, a hamburger
