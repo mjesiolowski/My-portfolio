@@ -1,8 +1,29 @@
 .title {
    color: $white;
    font-size: $font-size-xl;
-   letter-spacing: .3rem;
-   text-transform: uppercase;
-   margin: $m-size;
+   letter-spacing: .15rem;
+   // text-transform: uppercase;
+   margin: $m-size 0;
+   text-align: center;
    width: 100%;
+
+   &--main {
+      font-size: $font-size-xxl;
+      letter-spacing: .3rem;
+   }
+
+   &::first-letter {
+      color: $secondary-color;
+   }
+
+   @media (min-width: $tablet-breakpoint) {
+      font-size: $font-size-xxl;
+      text-align: left;
+
+      &--main {
+         letter-spacing: .6rem;
+         font-size: $font-size-header;
+      }
+   }
+
 }

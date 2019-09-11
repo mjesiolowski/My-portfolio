@@ -3,7 +3,7 @@
    margin: 0 $s-size $s-size $s-size;
 
    @media (min-width: $desktop-breakpoint) {
-      padding: $m-size;
+      margin: $l-size $m-size;
    }
 }
 
@@ -15,8 +15,32 @@
    }
 }
 
-.intro__photo {
+.intro__content {
+   @include flexbox(center, center);
+   align-content: center;
    flex-basis: 100%;
+   min-height: 100vh;
+   min-width: 32rem;
+
+   @media (min-width: $desktop-breakpoint) {
+      @include flexbox(center, flex-start);
+      flex-basis: 60%;
+   }
+}
+
+.intro__photo {
+   // flex-basis: 100%;
+   // justify-self: center;
+
+   background: url('../images/avatar.jpg') no-repeat top center;
+   background-size: cover;
+   border: 2px solid transparent;
+   border-radius: 50%;
+   margin: $m-size 0;
+   width: 20rem;
+   height: 20rem;
+
+   // @media (min-width: $desktop-breakpoint) {}
 }
 
 .intro__header {

@@ -12,7 +12,8 @@
    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+   <link href="https://fonts.googleapis.com/css?family=Kanit:400,700|Source+Sans+Pro&display=swap&subset=latin-ext"
+      rel="stylesheet">
    <link rel="stylesheet" href="styles/styles.bundle.css">
 </head>
 
@@ -20,32 +21,50 @@
    <div class="body-wrapper">
 
       <header class="header">
-         <h1 class="title">Maciej Jesiołowski</h1>
-         <p class="subtitle">JavaScript Developer</p>
+         <div class="header__content header__content--left">
+            <p class="title title--main">maciej</p>
+            <p class="title title--main">jesiołowski</p>
+         </div>
+         <div class="header__content header__content--right">
+            <p class="subtitle subtitle--main">javascript</p>
+            <p class="subtitle subtitle--main">developer</p>
+         </div>
+
       </header>
 
       <section class="intro">
-         <div class="intro__container container">
-
-            <div class="intro__photo">
-               <img src="./images/avatar.jpg" alt="author photo" class="photo">
-            </div>
 
 
-            <h2 class="intro__header section-header">About me</h2>
-            <p class="intro__text section-text">Since I created my first code snipped in JavaScript I discovered my
-               passion
-               to problem solving and creating web designs. I have rearranged my life completely, spending months on
-               everyday learning, sharpening my programing skills, making projects and assimilate more and more
-               advanced topics of the language. This process proved to myself that I am a fast, dedicated and
-               diligent learner, always striving for accuracy, excellence and efficiency.</p>
+         <div class="intro__content">
 
-            <p class="intro__text section-text">Core principles of my projects: minimalism, easy to navigate content,
-               optimization.</p>
+            <h2 class="title">Let me introduce myself</h2>
+            <div class="intro__photo"></div>
+
+            <p class="text">Since creating my first code snippet in JavaScript I have quickly
+               discovered a strong passion towards problem solving and creating web applications.
+               My ultimate goal is to become a MERN master, to make my code reusable, elegant, well-optimized and easy
+               to work with.
+            </p>
+
+            <p class="text">Core principles of my projects: optimization, minimalism, positive user experience.</p>
 
 
          </div>
-         <div class="intro__container container">
+
+
+
+         <!-- <h2 class="intro__header section-header">About me</h2>
+            <p class="intro__text section-text">Since I created my first code snipped in JavaScript I quickly discovered
+               a strong passion to problem solving and creating web designs. I have spent months on sharpening my
+               programing skills, making projects and discovering more and more advanced parts of the language. This
+               process proved to myself that I am dedicated and diligent learner.</p>
+
+            <p class="intro__text section-text">Core principles of my projects: minimalism, easy to navigate content,
+               optimization.</p> -->
+
+
+
+         <!-- <div class="intro__container container">
             <h2 class="intro__header section-header">Technology</h2>
             <ul class="intro__list">
 
@@ -130,7 +149,7 @@
             </ul>
 
 
-         </div>
+         </div> -->
 
       </section>
 
@@ -141,7 +160,7 @@
       <section class="projects">
          <div class="projects__container container project-A">
             <div class="projects__background">
-               <h3 class="projects__header section-header not-visible">HSP Quiz</h3>
+               <h3 class="projects__header section-header not-visible">HSP Quiz (MERN)</h3>
                <p class="projects__text section-text not-visible">The HSP Quiz website is meant to get you acquainted
                   with a
                   Highly Sensitive Person background. My goal was to contribute to the growth of the HSP issue
@@ -150,12 +169,13 @@
                <p class="projects__text section-text not-visible">The biggest challenge: my first attempt to build
                   a front-end + back-end app, private routing, quiz logic, modifiable content.
                </p>
-               <p class="projects__text section-text not-visible">Technology: React (with React Router and React Hooks),
+               <p class="projects__text section-text not-visible">Technology: MERN: React (with React Router and React
+                  Hooks),
                   Redux, SASS + BEM, Node.js (Express), MongoDB (Mongoose), Webpack, Heroku platform
                </p>
                <a class="projects__link button not-visible" href="https://mj-hsp.herokuapp.com" target="_blank"
                   rel="noopener" aria-label="navigate to the project preview">Preview</a>
-               <a class="projects__link button not-visible" href="https://github.com/mjesiolowski/HSP-Quiz"
+               <a class="projects__link button not-visible" href="https://github.com/mjesiolowski/HSP-Quiz-MERN"
                   target="_blank" rel="noopener" aria-label="navigate to the project source code">Code</a>
             </div>
          </div>

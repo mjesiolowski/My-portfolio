@@ -1,0 +1,27 @@
+.text {
+   font-size: $font-size-m;
+   color: $white;
+   letter-spacing: .2rem;
+   line-height: 1.3;
+   margin: $m-size 0;
+   text-align: center;
+   // text-align-last: center;
+
+
+   @media (min-width: $tablet-breakpoint) {
+      font-size: $font-size-xl;
+      text-align: left;
+   }
+
+   &::first-letter {
+      color: $secondary-color;
+      font-size: $font-size-xl;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+
+      @media (min-width: $tablet-breakpoint) {
+         font-size: $font-size-xxl;
+      }
+   }
+}

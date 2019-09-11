@@ -1,4 +1,5 @@
 .nav-arrow {
+   visibility: hidden;
    @include basicBoxStyle();
    bottom: 5px;
    font-size: $font-size-xl;
