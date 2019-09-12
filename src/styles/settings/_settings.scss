@@ -6,13 +6,17 @@ $black: rgb(20, 20, 20);
 $secondary-color: #bf5f82;
 
 // Font Size
-$font-size-header: 9.0rem;
-$font-size-subheader: 7.0rem;
-$font-size-xxl: 5.0rem;
-$font-size-xl: 3.5rem;
-$font-size-l: 2.4rem;
-$font-size-m: 1.8rem;
-$font-size-s: 1.5rem;
+$font-size-header: 5.0rem;
+$font-size-header--desktop: 9.0rem;
+$font-size-subheader: 3.5rem;
+$font-size-subheader--desktop: 7.0rem;
+$font-size-title: 3.5rem;
+$font-size-title--desktop: 5.0rem;
+$font-size-subtitle: 2rem;
+$font-size-subtitle--desktop: 3.5rem;
+$font-size-text: 1.8rem;
+$font-size-text--desktop: 2.7rem;
+
 
 // Spacing
 $xl-size: 15.0rem;

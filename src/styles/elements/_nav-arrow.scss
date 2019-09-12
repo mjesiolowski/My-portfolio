@@ -1,19 +1,19 @@
-.nav-arrow {
-   visibility: hidden;
-   @include basicBoxStyle();
-   bottom: 5px;
-   font-size: $font-size-xl;
-   padding: $s-size;
-   position: fixed;
-   right: 5px;
-   transition: .2s;
+// .nav-arrow {
+//    visibility: hidden;
+//    @include basicBoxStyle();
+//    bottom: 5px;
+//    font-size: $font-size-xl;
+//    padding: $s-size;
+//    position: fixed;
+//    right: 5px;
+//    transition: .2s;
 
-   @media (min-width: $desktop-breakpoint) {
-      &:hover {
-         background-color: $white;
-         box-shadow: 0 0 6px 3px $transparent-black;
-         color: $transparent-black
-      }
-   }
+//    @media (min-width: $desktop-breakpoint) {
+//       &:hover {
+//          background-color: $white;
+//          box-shadow: 0 0 6px 3px $transparent-black;
+//          color: $transparent-black
+//       }
+//    }
 
-}
+// }

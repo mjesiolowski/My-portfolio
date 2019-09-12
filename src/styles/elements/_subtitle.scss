@@ -1,11 +1,12 @@
 .subtitle {
-   font-size: $font-size-xl;
+   font-size: $font-size-subtitle;
    letter-spacing: .2rem;
    color: $white;
-   margin: $m-size;
+   margin: $m-size 0;
    width: 100%;
 
    &--main {
+      font-size: $font-size-subheader;
       letter-spacing: .2rem;
    }
 
@@ -14,8 +15,10 @@
    }
 
    @media (min-width: $tablet-breakpoint) {
+      font-size: $font-size-subtitle--desktop;
+
       &--main {
-         font-size: $font-size-subheader;
+         font-size: $font-size-subheader--desktop;
       }
    }
 }

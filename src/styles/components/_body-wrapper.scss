@@ -1,5 +1,6 @@
 .body-wrapper {
    @include flexbox(flex-start, center);
    background-color: $transparent-black;
+   // max-width: 1000px;
    overflow: hidden;
 }

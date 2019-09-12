@@ -1,6 +1,6 @@
 .title {
    color: $white;
-   font-size: $font-size-xl;
+   font-size: $font-size-title;
    letter-spacing: .15rem;
    // text-transform: uppercase;
    margin: $m-size 0;
@@ -8,8 +8,9 @@
    width: 100%;
 
    &--main {
-      font-size: $font-size-xxl;
+      font-size: $font-size-header;
       letter-spacing: .3rem;
+      text-align: left;
    }
 
    &::first-letter {
@@ -17,12 +18,11 @@
    }
 
    @media (min-width: $tablet-breakpoint) {
-      font-size: $font-size-xxl;
-      text-align: left;
+      font-size: $font-size-title--desktop;
 
       &--main {
          letter-spacing: .6rem;
-         font-size: $font-size-header;
+         font-size: $font-size-header--desktop;
       }
    }
 

@@ -2,7 +2,7 @@
    @include flexbox(center, space-around);
    margin: 0 $s-size $s-size $s-size;
 
-   @media (min-width: $desktop-breakpoint) {
+   @media (min-width: $tablet-breakpoint) {
       margin: $l-size $m-size;
    }
 }
@@ -10,17 +10,17 @@
 .intro__container {
    flex-basis: 100%;
 
-   @media (min-width: $desktop-breakpoint) {
+   @media (min-width: $tablet-breakpoint) {
       flex-basis: 60%;
    }
 }
 
-.intro__content {
+.intro__wrapper {
    @include flexbox(center, center);
    align-content: center;
    flex-basis: 100%;
    min-height: 100vh;
-   min-width: 32rem;
+   min-width: 30rem;
 
    @media (min-width: $desktop-breakpoint) {
       @include flexbox(center, flex-start);
@@ -36,7 +36,7 @@
    background-size: cover;
    border: 2px solid transparent;
    border-radius: 50%;
-   margin: $m-size 0;
+   margin: $m-size auto;
    width: 20rem;
    height: 20rem;
 
@@ -46,7 +46,7 @@
 .intro__header {
    flex-basis: 55%;
 
-   @media (min-width: $desktop-breakpoint) {
+   @media (min-width: $tablet-breakpoint) {
       flex-basis: 35%;
    }
 }
@@ -76,14 +76,14 @@
    }
 }
 
-.intro__icon {
-   font-size: $font-size-xxl;
+// .intro__icon {
+//    font-size: $font-size-xxl;
 
-   &--link {
-      margin: $m-size 0;
-      flex-basis: 100%;
-   }
-}
+//    &--link {
+//       margin: $m-size 0;
+//       flex-basis: 100%;
+//    }
+// }
 
 .intro__link {
    @include flexbox(flex-start, center);

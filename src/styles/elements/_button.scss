@@ -1,16 +1,27 @@
 .button {
-   border: 2px solid $white;
-   border-radius: 15px;
+   border: 2px solid $secondary-color;
+   border-radius: 30px;
    color: $white;
-   font-size: $font-size-l;
-   padding: $l-size;
+   display: block;
+   font-size: $font-size-text--desktop;
+   font-weight: 700;
+   letter-spacing: 6px;
+   text-align: center;
    text-decoration: none;
-   width: 20rem;
+   text-transform: uppercase;
+   transition: background-color .2s;
+   padding: $l-size 0;
 
-   @media (min-width: $desktop-breakpoint) {
+
+   @media (min-width: $tablet-breakpoint) {
+      font-size: $font-size-text--desktop;
+      letter-spacing: 5px;
+      padding: $l-size;
+
+
       &:hover {
-         color: $transparent-black;
-         background-color: $white;
+         // color: $transparent-black;
+         background-color: $secondary-color;
       }
    }
 

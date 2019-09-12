@@ -1,109 +1,121 @@
+@mixin imgBackground ($project, $pos1: center, $pos2: center) {
+   &--#{$project}1 {
+      background: url('../images/#{$project}1.jpg') no-repeat $pos1 $pos2;
+      background-size: cover;
+   }
+
+   &--#{$project}2 {
+      background: url('../images/#{$project}2.jpg') no-repeat $pos1 $pos2;
+      background-size: cover;
+      display: none;
+
+      @media (min-width: $tablet-breakpoint) {
+         display: block
+      }
+   }
+}
+
 .projects {
    @include flexbox(center, space-around);
-   margin: $s-size $s-size 0 $s-size;
    flex-basis: 100%;
+   margin: 0 $s-size $s-size $s-size;
 
    @media (min-width: $tablet-breakpoint) {
-      padding: $m-size;
+      margin: $l-size $m-size;
    }
 }
 
-.projects__container {
+.projects__wrapper {
    flex-basis: 100%;
+   min-height: 100vh;
+   min-width: 30rem;
+
+   @media (min-width: $desktop-breakpoint) {
+      flex-basis: 60%;
+   }
+}
+
+.projects__title {
+   grid-column: 1/ -1;
+   grid-row: 1 / 2;
+   padding-bottom: $m-size;
+}
+
+.projects__list {
    padding: 0;
-   position: relative;
+}
+
+.projects__project {
+   @include flexbox(baseline, space-between);
+   border-bottom: 1px solid $white;
+   margin: $s-size;
+
+   &:last-child {
+      border-bottom: none;
+   }
 
    @media (min-width: $desktop-breakpoint) {
-      flex-basis: 45%;
+      padding-bottom: $xl-size;
    }
 }
 
-.projects__background {
+
+.projects__text:first-child {
+   flex-basis: 60%;
+}
+
+.projects__subtitle {
+   flex-basis: 60%;
+   font-weight: 700;
+
+   &:nth-child(2) {
+      flex-basis: 40%;
+      text-align: right;
+   }
+}
+
+.projects__project-details {
+   color: $white;
+   flex-basis: 100%;
+   min-height: 20rem;
+}
+
+.projects__images {
    @include flexbox(center, space-evenly);
-   height: 100%;
-   left: 0;
-   min-height: 55rem;
-   padding: $l-size;
-   position: relative;
-   top: 0;
-   flex-basis: 100%;
-
-   @media (min-width: $desktop-breakpoint) {
-      transition: .5s;
-   }
 }
 
-.projects__header {
-   flex-basis: 55%;
-   margin: 0 auto;
+.projects__img {
+   border: 2px solid $white;
+   height: 20rem;
+   margin: $m-size;
+   width: 27rem;
 
-   @media (min-width: $desktop-breakpoint) {
-      transition: .2s;
+
+   @media (min-width: $tablet-breakpoint) {
+      width: 45rem;
+      height: 27rem;
    }
+
+   @include imgBackground(HSP, top);
+   @include imgBackground(battleships);
+   @include imgBackground(bootstrap);
+   @include imgBackground(rps);
+   @include imgBackground(tasks, top);
+   @include imgBackground(wedding, top);
+
 }
 
-.projects__text {
-   flex-basis: 100%;
-
-   @media (min-width: $desktop-breakpoint) {
-      transition: .2s;
-   }
+.projects__links {
+   @include flexbox(center, space-evenly);
+   margin: $m-size;
 }
 
 .projects__link {
-   flex-basis: 90%;
-   margin: $m-size;
+   flex-basis: 100%;
+   margin-top: $m-size;
 
-   @media (min-width: $desktop-breakpoint) {
-      flex-basis: 35%;
-      transition: .2s;
+   @media (min-width: $tablet-breakpoint) {
+      flex-basis: 35rem;
+      margin: $m-size;
    }
-}
-
-.project-A {
-   background: url('../images/thumb6.jpg') no-repeat top;
-   background-size: cover;
-   position: relative;
-
-   @include project-hover()
-}
-
-.project-B {
-   background: url('../images/thumb2.jpg') no-repeat top;
-   background-size: cover;
-   position: relative;
-
-   @include project-hover()
-}
-
-.project-C {
-   background: url('../images/thumb1.jpg') no-repeat center;
-   background-size: cover;
-   position: relative;
-
-   @include project-hover()
-}
-
-.project-D {
-   background: url('../images/thumb3.jpg') no-repeat top;
-   background-size: cover;
-   position: relative;
-
-   @include project-hover()
-}
-
-.project-E {
-   background: url('../images/thumb4.jpg') no-repeat top;
-   background-size: cover;
-   position: relative;
-
-   @include project-hover()
-}
-
-.project-F {
-   background: url('../images/thumb5.jpg') no-repeat top;
-   background-size: cover;
-   position: relative;
-
-   @include project-hover()
 }
