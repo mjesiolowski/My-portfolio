@@ -8,7 +8,7 @@
    <title>Maciej Jesiołowski JavaScript Developer</title>
    <meta name="Description" content="Maciej Jesiołowski Front End Developer | JavaScript Developer">
    <meta name="Keywords"
-      content="maciej, jesiolowski, html, css, webdeveloper, frontenddeveloper, js, javascript, react">
+      content="maciej, jesiolowski, html, css, webdeveloper, front-end-developer, js, javascript, react, mern">
    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -20,7 +20,24 @@
 <body>
    <div class="body-wrapper">
 
-      <header class="header">
+      <nav class="nav">
+
+         <ul class="nav__list">
+            <li class="nav__item">
+               <a href="#works" class="nav__link">Works</a>
+            </li>
+         </ul>
+
+
+         <ul class="nav__list nav__links">
+            <li class="nav__item"><a href="#technology" class="nav__link">Technology</a></li>
+            <li class="nav__item"><a href="#intro" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+         </ul>
+
+      </nav>
+
+      <header id="header" class="header">
          <div class="header__content header__content--left">
             <p class="title title--main">maciej</p>
             <p class="title title--main">jesiołowski</p>
@@ -32,7 +49,7 @@
 
       </header>
 
-      <section class="intro">
+      <section id="intro" class="intro">
 
 
          <div class="intro__wrapper">
@@ -50,110 +67,9 @@
 
 
          </div>
-
-
-
-         <!-- <h2 class="intro__header section-header">About me</h2>
-            <p class="intro__text section-text">Since I created my first code snipped in JavaScript I quickly discovered
-               a strong passion to problem solving and creating web designs. I have spent months on sharpening my
-               programing skills, making projects and discovering more and more advanced parts of the language. This
-               process proved to myself that I am dedicated and diligent learner.</p>
-
-            <p class="intro__text section-text">Core principles of my projects: minimalism, easy to navigate content,
-               optimization.</p> -->
-
-
-
-         <!-- <div class="intro__container container">
-            <h2 class="intro__header section-header">Technology</h2>
-            <ul class="intro__list">
-
-               <li class="intro__item">
-                  <i class="fab fa-js-square intro__icon"></i>
-                  <p class="intro__text section-text">JavaScript</p>
-               </li>
-               <li class="intro__item">
-                  <i class="fab fa-react intro__icon"></i>
-                  <p class="intro__text section-text">React + Redux</p>
-               </li>
-               <li class="intro__item">
-                  <i class="fab fa-sass intro__icon"></i>
-                  <p class="intro__text section-text">SASS + BEM</p>
-               </li>
-               <li class="intro__item">
-                  <i class="fab fa-gulp intro__icon"></i>
-                  <p class="intro__text section-text">Gulp</p>
-               </li>
-               <li class="intro__item">
-                  <i class="fas fa-box-open intro__icon"></i>
-                  <p class="intro__text section-text">Webpack</p>
-               </li>
-               <li class="intro__item">
-                  <i class="fab fa-github intro__icon"></i>
-                  <p class="intro__text section-text">GIT</p>
-               </li>
-               <li class="intro__item">
-                  <i class="fab fa-airbnb intro__icon"></i>
-                  <p class="intro__text section-text">Jest + Enzyme (basics)<p>
-               </li>
-               <li class="intro__item">
-                  <i class="fab fa-node-js intro__icon"></i>
-                  <p class="intro__text section-text">node.js + Express (basics)<p>
-               </li>
-               <li class="intro__item">
-                  <i class="fas fa-database intro__icon"></i>
-                  <p class="intro__text section-text">MongoDB + Mongoose (basics)<p>
-               </li>
-               <li class="intro__item">
-                  <i class="fab fa-bootstrap intro__icon"></i>
-                  <p class="intro__text section-text">Bootstrap (basics)</p>
-               </li>
-            </ul>
-
-
-            <h3 class="intro__header section-header">Next goals</h3>
-
-            <ul class="intro__list">
-               <li class="intro__item">
-                  <i class="fab fa-react intro__icon"></i>
-                  <p class="intro__text section-text">Gatsby<p>
-               </li>
-            </ul>
-         </div>
-
-
-         <div class="intro__container container">
-            <h2 class="intro__header section-header">Contact</h2>
-            <ul class="intro__list">
-               <li class="intro__item intro__item--link">
-                  <a class="intro__link" href="mailto:maciej.jesiolowski@gmail.com"
-                     arial-label="navigate to author's e-mail address"><i
-                        class="far fa-envelope intro__icon intro__icon--link"></i><span
-                        class="intro__text section-text">maciej.jesiolowski [AT] gmail.com</span></a>
-               </li>
-
-               <li class="intro__item intro__item--link">
-                  <a class="intro__link" href="https://github.com/mjesiolowski" target="_blank" rel="noopener"
-                     arial-label="navigate to author's github profile"><i
-                        class="fab fa-github-alt intro__icon intro__icon--link"></i><span
-                        class="intro__text section-text">github.com/mjesiolowski</span></a>
-               </li>
-
-               <li class="intro__item intro__item--link">
-                  <a class="intro__link" href="https://linkedin.com/in/maciej-jesiolowski" target="_blank"
-                     rel="noopener" arial-label="navigate to author's LinkedIn profile"><i
-                        class="fab fa-linkedin-in intro__icon intro__icon--link"></i><span
-                        class="intro__text section-text">linkedin.com/in/maciej-jesiolowski</span></a>
-               </li>
-
-            </ul>
-
-
-         </div> -->
-
       </section>
 
-      <section class="projects">
+      <section id="works" class="projects">
          <div class="projects__wrapper">
             <h2 class="projects__title title">Recent works</h2>
             <ol class="projects__list">
@@ -295,7 +211,7 @@
                      <p class="projects__text text"><strong>The biggest challenge:</strong> my first vanilla JS
                         application I am proud of.
                      </p>
-                     <p class="projects__text text"><strong>Technology:</strong>HTTML5, SASS + BEM, JavaScript, Gulp
+                     <p class="projects__text text"><strong>Technology:</strong>HTML5, SASS + BEM, JavaScript, Gulp
                      </p>
                      <div class="projects__links">
                         <a class="projects__link button"
@@ -338,102 +254,97 @@
          </div>
 
 
-         <!-- <div class="projects__container container project-A">
-         
-         <div class="projects__container container project-B">
-            <div class="projects__background">
-               <h3 class="projects__header section-header not-visible">React Task App</h3>
-               <p class="projects__text section-text not-visible">NEVER build a task (to do) app they say, everyone
-                  builds it they say... Well, it doesn't resonate with me at all! I love being organized and I cannot
-                  imagine starting my day without looking at my tasks list, hence I found it totally exciting to build a
-                  task manager on my own.
-               </p>
-               <p class="projects__text section-text not-visible">React based task manager app with adding, editing,
-                  deleting, searching, comments and routes.
-               </p>
-               <p class="projects__text section-text not-visible">Technology: React (with React Router), Redux, Jest +
-                  Enzyme (unit tests), SASS +
-                  BEM, Node.js (Express), Webpack, Heroku platform
-               </p>
-               <a class="projects__link button not-visible" href="https://mj-taskapp.herokuapp.com/" target="_blank"
-                  rel="noopener" aria-label="navigate to the project preview">Preview</a>
-               <a class="projects__link button not-visible" href="https://github.com/mjesiolowski/React-ToDoApp"
-                  target="_blank" rel="noopener" aria-label="navigate to the project source code">Code</a>
-            </div>
-         </div>
-
-         <div class="projects__container container project-C">
-            <div class="projects__background">
-               <h3 class="projects__header section-header not-visible">Wedding Dress Salon</h3>
-               <p class="projects__text section-text not-visible">This is my first commercial project, it presents the
-                  offer of an
-                  exclusive wedding dress salon. My goal was to make this website readable, easy to navigate,
-                  eye-catching, consistent and fully responsive.
-               </p>
-               <p class="projects__text section-text not-visible">Technology: SASS + BEM | JS | Gulp
-               </p>
-               <a class="projects__link button not-visible" href="https://nataliq.pl" target="_blank" rel="noopener"
-                  aria-label="navigate to the project preview">Preview</a>
-               <a class="projects__link button not-visible" href="https://github.com/mjesiolowski/salon" target="_blank"
-                  rel="noopener" aria-label="navigate to the project source code">Code</a>
-            </div>
-         </div>
-
-
-
-         <div class="projects__container container project-D">
-            <div class="projects__background">
-               <h3 class="projects__header section-header not-visible">Battleships game</h3>
-               <p class="projects__text section-text not-visible">Battleships game based on objected JS and Flexbox.</p>
-               <p class="projects__text section-text not-visible">Technology: HTTML5, CSS (Flexbox), OOP JS, RWD
-               </p>
-               <a class="projects__link button not-visible" href="https://mjesiolowski.github.io/Battleships/"
-                  target="_blank" rel="noopener" aria-label="navigate to the project preview">Preview</a>
-               <a class="projects__link button not-visible" href="https://github.com/mjesiolowski/Battleships"
-                  target="_blank" rel="noopener" aria-label="navigate to the project source code">Code</a>
-
-            </div>
-         </div>
-
-         <div class="projects__container container project-E">
-            <div class="projects__background">
-               <h3 class="projects__header section-header not-visible">Rock-Paper-Scissors</h3>
-               <p class="projects__text section-text not-visible">This project shows how to use basics of JavaScript to
-                  create a simple point-and-click game by interacting with document object model. To make the game
-                  efficient and simple I divided the code logic into two main parts: the player choice and the computer
-                  choice. The core of the logic is based on if statements, loops and setTimeout callback. The data is
-                  kept in local storage.</p>
-               <p class="projects__text section-text not-visible">Technology: HTTML5, SASS + BEM, JavaScript, Gulp
-               </p>
-               <a class="projects__link button not-visible"
-                  href="https://www.mjesiolowski.pl/projects/rock-paper-scissors/" target="_blank" rel="noopener"
-                  aria-label="navigate to the project preview">Preview</a>
-               <a class="projects__link button not-visible" href="https://github.com/mjesiolowski/Rock-paper-scissors"
-                  target="_blank" rel="noopener" aria-label="navigate to the project source code">Code</a>
-
-            </div>
-         </div>
-
-         <div class="projects__container container project-F">
-            <div class="projects__background">
-               <h3 class="projects__header section-header not-visible">5* Hotel & Spa</h3>
-               <p class="projects__text section-text not-visible">Bootstrap template with a slider, forms, a hamburger
-                  menu
-                  and RWD
-                  support. </p>
-               <p class="projects__text section-text not-visible">Technology: Bootstrap 4 | CSS3 + BEM | JS</p>
-               <a class="projects__link button not-visible" href="https://mjesiolowski.github.io/bootstrapTemplate/"
-                  target="_blank" rel="noopener" aria-label="navigate to the project preview">Preview</a>
-               <a class="projects__link button not-visible" href="https://github.com/mjesiolowski/bootstrapTemplate"
-                  target="_blank" rel="noopener" aria-label="navigate to the project source code">Code</a>
-            </div>
-
-         </div> -->
 
       </section>
 
+      <div id="technology" class="technology">
+         <div class="technology__wrapper">
+            <h2 class="title">Technology</h2>
+            <ul class="technology__list">
+
+               <li class="technology__item">
+                  <i class="fab fa-js-square technology__icon"></i>
+                  <p class="technology__icon-text">JavaScript</p>
+               </li>
+               <li class="technology__item">
+                  <i class="fab fa-react technology__icon"></i>
+                  <p class="technology__icon-text">React + Redux</p>
+               </li>
+               <li class="technology__item">
+                  <i class="fab fa-sass technology__icon"></i>
+                  <p class="technology__icon-text">SASS + BEM</p>
+               </li>
+               <li class="technology__item">
+                  <i class="fab fa-gulp technology__icon"></i>
+                  <p class="technology__icon-text">Gulp</p>
+               </li>
+               <li class="technology__item">
+                  <i class="fas fa-box-open technology__icon"></i>
+                  <p class="technology__icon-text">Webpack</p>
+               </li>
+               <li class="technology__item">
+                  <i class="fab fa-github technology__icon"></i>
+                  <p class="technology__icon-text">GIT</p>
+               </li>
+               <li class="technology__item">
+                  <i class="fab fa-airbnb technology__icon"></i>
+                  <p class="technology__icon-text">Jest + Enzyme (basics)<p>
+               </li>
+               <li class="technology__item">
+                  <i class="fab fa-node-js technology__icon"></i>
+                  <p class="technology__icon-text">node.js + Express (basics)<p>
+               </li>
+               <li class="technology__item">
+                  <i class="fas fa-database technology__icon"></i>
+                  <p class="technology__icon-text">MongoDB + Mongoose (basics)<p>
+               </li>
+               <li class="technology__item">
+                  <i class="fab fa-bootstrap technology__icon"></i>
+                  <p class="technology__icon-text">Bootstrap (basics)</p>
+               </li>
+            </ul>
+            <h3 class="title">Next goals</h3>
+
+            <ul class="technology__list">
+               <li class="technology__item">
+                  <i class="fab fa-react technology__icon"></i>
+                  <p class="technology__icon-text">Gatsby<p>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+      <div id="contact" class="contact">
+         <div class="contact__wrapper">
+            <h2 class="title">Contact</h2>
+            <ul class="contact__list">
+               <li class="contact__item">
+                  <a class="contact__link" href="mailto:maciej.jesiolowski@gmail.com"
+                     arial-label="navigate to author's e-mail address"><i
+                        class="far fa-envelope  contact__icon"></i><span
+                        class="intro__text contact__icon-text">maciej.jesiolowski [AT] gmail.com</span></a>
+               </li>
+
+               <li class="contact__item">
+                  <a class="contact__link" href="https://github.com/mjesiolowski" target="_blank" rel="noopener"
+                     arial-label="navigate to author's github profile"><i
+                        class="fab fa-github-alt  contact__icon"></i><span
+                        class="intro__text contact__icon-text">github.com/mjesiolowski</span></a>
+               </li>
+
+               <li class="contact__item">
+                  <a class="contact__link" href="https://linkedin.com/in/maciej-jesiolowski" target="_blank"
+                     rel="noopener" arial-label="navigate to author's LinkedIn profile"><i
+                        class="fab fa-linkedin-in contact__icon"></i><span
+                        class="intro__text contact__icon-text">linkedin.com/in/maciej-jesiolowski</span></a>
+               </li>
+
+            </ul>
+         </div>
+      </div>
+
       <nav>
-         <a href="#top" aria-label="navigate to the top"> <i class="nav-arrow fas fa-arrow-up"></i></a>
+         <a href="#intro" aria-label="navigate to the top"> <i class="nav-arrow fas fa-arrow-up"></i></a>
       </nav>
 
       <footer class="footer">

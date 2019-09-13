@@ -1,0 +1,30 @@
+.contact {
+  @extend .technology;
+}
+
+.contact__wrapper {
+  @extend .technology__wrapper;
+  min-height: 50vh;
+}
+
+.contact__list {
+  @extend .technology__list;
+}
+
+.contact__item {
+  @extend .technology__item;
+}
+
+.contact__icon {
+  @extend .technology__icon;
+  width: 100%;
+}
+
+.contact__link {
+  @extend .nav__link;
+  text-decoration: none;
+}
+
+.contact__icon-text {
+  @extend .technology__icon-text;
+}

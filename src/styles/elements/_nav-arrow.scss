@@ -1,19 +1,22 @@
-// .nav-arrow {
-//    visibility: hidden;
-//    @include basicBoxStyle();
-//    bottom: 5px;
-//    font-size: $font-size-xl;
-//    padding: $s-size;
-//    position: fixed;
-//    right: 5px;
-//    transition: .2s;
+.nav-arrow {
+  display: block;
+  color: $white;
+  border: 2px solid $secondary-color;
+  // @include basicBoxStyle();
 
-//    @media (min-width: $desktop-breakpoint) {
-//       &:hover {
-//          background-color: $white;
-//          box-shadow: 0 0 6px 3px $transparent-black;
-//          color: $transparent-black
-//       }
-//    }
+  bottom: 10px;
+  font-size: $font-size-subtitle;
+  opacity: 0;
+  padding: $s-size;
+  position: fixed;
+  right: 10px;
+  transition: opacity .3s;
 
-// }
+  @media (min-width: $tablet-breakpoint) {
+    &:hover {
+      border: 2px solid $white;
+      color: $secondary-color;
+    }
+  }
+
+}
