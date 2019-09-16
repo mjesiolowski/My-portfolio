@@ -1,0 +1,65 @@
+@mixin burger-line {
+  background-color: $white;
+  height: 3px;
+  position: absolute;
+  width: 100%;
+}
+
+.burger {
+  background-color: $black;
+  border: 1px solid $secondary-color;
+  cursor: pointer;
+  padding: $s-size;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  transition: transform .8s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  z-index: 1;
+
+  @media (min-width: $tablet-breakpoint) {
+    transform: translateY(-150%);
+  }
+}
+
+.burger__wrapper {
+  display: block;
+  height: 2.5rem;
+  position: relative;
+  width: 3rem;
+}
+
+.burger__content {
+  @include burger-line;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color .8s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+
+.burger__content::before,
+.burger__content::after {
+  @include burger-line;
+  content: '';
+  left: 0;
+  transition: transform .8s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+
+.burger__content::before {
+  top: -1rem;
+}
+
+.burger__content::after {
+  top: 1rem;
+}
+
+.burger--active .burger__content {
+  background-color: transparent;
+}
+
+.burger--active .burger__content:before {
+  transform: translateY(1rem) rotate(45deg);
+}
+
+.burger--active .burger__content:after {
+  transform: translateY(-1rem) rotate(-45deg);
+}

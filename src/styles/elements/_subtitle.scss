@@ -1,13 +1,12 @@
 .subtitle {
    font-size: $font-size-subtitle;
-   letter-spacing: .2rem;
+   letter-spacing: .4rem;
    color: $white;
    margin: $m-size 0;
    width: 100%;
 
    &--main {
       font-size: $font-size-subheader;
-      letter-spacing: .2rem;
    }
 
    &::first-letter {
@@ -21,8 +20,4 @@
          font-size: $font-size-subheader--desktop;
       }
    }
-
-   // &--centered {
-   //    text-align: center;
-   // }
 }

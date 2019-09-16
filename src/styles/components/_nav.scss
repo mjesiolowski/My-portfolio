@@ -1,43 +1,93 @@
-@media (min-width: $tablet-breakpoint) {
   .nav {
-    @include flexbox(center, space-between);
-    background-color: $transparent-black;
+    @include flexbox(center, center);
+    background-color: $black;
+    height: 100vh;
     position: fixed;
-    opacity: 0;
-    transition: opacity .2s;
+    transform: translateY(-100%);
+    transition: transform .8s cubic-bezier(0.05, 1.04, 0.72, 0.98);
     width: 100%;
+    z-index: 1;
+
+
+    &.isActive .nav__link {
+      transform: translate3d(0, 0, 0);
+      transition: transform .8s;
+
+      &--about {
+        transition-delay: .1s;
+      }
+
+      &--technology {
+        transition-delay: .15s;
+      }
+
+      &--contact {
+        transition-delay: .2s;
+      }
+    }
   }
 
   .nav__list {
-    height: 100%;
     list-style: none;
-    // padding: $m-size;
+    padding: 0;
+    text-align: center;
   }
-
-  .nav__links {
-    @include flexbox(center, space-around);
-    flex-basis: 50%;
-  }
-
 
   .nav__link {
     color: $white;
     display: block;
-    font-size: $font-size-subtitle;
+    font-size: $font-size-title;
     letter-spacing: .17rem;
     padding: $m-size;
     text-decoration: none;
     text-transform: lowercase;
     transition: color .2s;
+    transform: translate3d(0, -50%, 0);
 
-
-    &:hover {
+    &::first-letter {
       color: $secondary-color;
     }
 
-    &--active {
+    &--highlighted {
       color: $secondary-color;
     }
 
   }
-}
+
+  .nav-desktop {
+    @extend .nav;
+    height: auto;
+    transition: transform .2s;
+
+    @media (max-width: $tablet-breakpoint) {
+      display: none;
+    }
+  }
+
+  .nav-desktop__list {
+    @extend .nav__list;
+    @include flexbox(center, space-between);
+    flex-basis: 100%;
+  }
+
+  .nav-desktop__link {
+    @extend .nav__link;
+    transform: translate3d(0, 0, 0);
+    font-size: $font-size-text--desktop;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .nav-desktop__item {
+    &:first-child {
+      flex-basis: 40%;
+      text-align: left;
+
+    }
+  }
+
+  .isActive {
+    transform: translateY(0%)
+  }

@@ -1,7 +1,0 @@
-.container {
-   @include basicBoxStyle();
-   @include flexbox(baseline, center);
-   margin: $l-size 0;
-   padding: $m-size;
-   text-align: center;
-}

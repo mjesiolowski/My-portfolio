@@ -12,8 +12,6 @@
    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-   <link href="https://fonts.googleapis.com/css?family=Kanit:400,700|Source+Sans+Pro&display=swap&subset=latin-ext"
-      rel="stylesheet">
    <link rel="stylesheet" href="styles/styles.bundle.css">
 </head>
 
@@ -21,30 +19,49 @@
    <div class="body-wrapper">
 
       <nav class="nav">
-
          <ul class="nav__list">
-            <li class="nav__item">
-               <a href="#works" class="nav__link">Works</a>
+            <li class="nav__item"> <a href="#works" class="nav__link nav__link--works">Works</a></li>
+            <li class="nav__item"><a href="#intro" class="nav__link nav__link--about">About</a></li>
+            <li class="nav__item"><a href="#technology" class="nav__link nav__link--technology">Technology</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link nav__link--contact">Contact</a>
             </li>
          </ul>
+      </nav>
 
-
-         <ul class="nav__list nav__links">
-            <li class="nav__item"><a href="#technology" class="nav__link">Technology</a></li>
-            <li class="nav__item"><a href="#intro" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+      <nav class="nav-desktop">
+         <ul class="nav-desktop__list">
+            <li class="nav-desktop__item"> <a href="#works" class="nav-desktop__link nav-desktop__link--works">Works</a>
+            </li>
+            <li class="nav-desktop__item"><a href="#intro" class="nav-desktop__link nav-desktop__link--about">About</a>
+            </li>
+            <li class="nav-desktop__item"><a href="#technology"
+                  class="nav-desktop__link nav_-desktop_link--technology">Technology</a></li>
+            <li class="nav-desktop__item"><a href="#contact"
+                  class="nav-desktop__link nav-desktop__link--contact">Contact</a>
+            </li>
          </ul>
+      </nav>
+
+      <nav>
+         <button aria-label="mobile menu icon" class="burger">
+            <span class="burger__wrapper">
+               <span class="burger__content"></span>
+            </span>
+         </button>
+
+         <a href="#intro" aria-label="navigate to the top"> <i class="nav-arrow fas fa-arrow-up"></i></a>
 
       </nav>
 
+
       <header id="header" class="header">
-         <div class="header__content header__content--left">
-            <p class="title title--main">maciej</p>
-            <p class="title title--main">jesiołowski</p>
+         <div class="header__content header__content--name">
+            <h1 class="title title--main">maciej</h1>
+            <h1 class="title title--main">jesiołowski</h1>
          </div>
-         <div class="header__content header__content--right">
-            <p class="subtitle subtitle--main">javascript</p>
-            <p class="subtitle subtitle--main">developer</p>
+         <div class="header__content header__content--title">
+            <h2 class="subtitle subtitle--main">javascript</h2>
+            <h2 class="subtitle subtitle--main">developer</h2>
          </div>
 
       </header>
@@ -122,7 +139,7 @@
                         task manager on my own.
                      </p>
                      <p class="projects__text text"><strong>The biggest challenge:</strong> this is my React + Redux
-                        playground application. Every time I lernt something new about React I tried to implement it to
+                        playground application. Every time I lernt something new about React I implemented it to
                         the app, for instance: Redux, React Router, Hooks.
                      </p>
                      <p class="projects__text text"><strong>Technology:</strong> React (with React Router), Redux, Jest
@@ -153,7 +170,7 @@
                         eye-catching, consistent and fully responsive.
                      </p>
                      <p class="projects__text text"><strong>The biggest challenge:</strong> this is my first commercial
-                        project, built from scratch from the very first snippet till deployment
+                        project, built from scratch from the very first snippet till deployment.
                      </p>
                      <p class="projects__text text"><strong>Technology:</strong> SASS + BEM, JS, Gulp
                      </p>
@@ -232,13 +249,11 @@
                      </div>
 
                      <p class="projects__text text"><strong>Info:</strong> Bootstrap template with a slider, forms, a
-                        hamburger
-                        menu
-                        and RWD
-                        support.
+                        hamburger menu and RWD support.
                      </p>
-                     <p class="projects__text text"><strong>The biggest challenge:</strong> I played with CSS and
-                        Bootstrap here.
+                     <p class="projects__text text"><strong>The biggest challenge:</strong> I play with CSS and
+                        Bootstrap here. This project is my very first satisfactory attempt to code a static website from
+                        scratch by rewriting a random template.
                      </p>
                      <p class="projects__text text"><strong>Technology:</strong> Bootstrap 4, CSS3 + BEM, JS
                      </p>
@@ -257,7 +272,7 @@
 
       </section>
 
-      <div id="technology" class="technology">
+      <section id="technology" class="technology">
          <div class="technology__wrapper">
             <h2 class="title">Technology</h2>
             <ul class="technology__list">
@@ -312,40 +327,36 @@
                </li>
             </ul>
          </div>
-      </div>
+      </section>
 
-      <div id="contact" class="contact">
+      <section id="contact" class="contact">
          <div class="contact__wrapper">
             <h2 class="title">Contact</h2>
             <ul class="contact__list">
                <li class="contact__item">
                   <a class="contact__link" href="mailto:maciej.jesiolowski@gmail.com"
                      arial-label="navigate to author's e-mail address"><i
-                        class="far fa-envelope  contact__icon"></i><span
-                        class="intro__text contact__icon-text">maciej.jesiolowski [AT] gmail.com</span></a>
+                        class="far fa-envelope  contact__icon"></i><span class="contact__icon-text">maciej.jesiolowski
+                        [AT] gmail.com</span></a>
                </li>
 
                <li class="contact__item">
                   <a class="contact__link" href="https://github.com/mjesiolowski" target="_blank" rel="noopener"
                      arial-label="navigate to author's github profile"><i
                         class="fab fa-github-alt  contact__icon"></i><span
-                        class="intro__text contact__icon-text">github.com/mjesiolowski</span></a>
+                        class="contact__icon-text">github.com/mjesiolowski</span></a>
                </li>
 
                <li class="contact__item">
                   <a class="contact__link" href="https://linkedin.com/in/maciej-jesiolowski" target="_blank"
                      rel="noopener" arial-label="navigate to author's LinkedIn profile"><i
                         class="fab fa-linkedin-in contact__icon"></i><span
-                        class="intro__text contact__icon-text">linkedin.com/in/maciej-jesiolowski</span></a>
+                        class="contact__icon-text">linkedin.com/in/maciej-jesiolowski</span></a>
                </li>
 
             </ul>
          </div>
-      </div>
-
-      <nav>
-         <a href="#intro" aria-label="navigate to the top"> <i class="nav-arrow fas fa-arrow-up"></i></a>
-      </nav>
+      </section>
 
       <footer class="footer">
          <p>© <span class="footer__date"></span> by<a class="footer__link" href="https://mjesiolowski.pl"

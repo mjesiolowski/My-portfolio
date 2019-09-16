@@ -1,43 +1,25 @@
 .header {
    @include flexbox(center, flex-end);
-   // background-color: $transparent-black;
-
-   font-family: 'Kanit', 'Source Sans Pro', sans-serif;
    flex-basis: 100%;
    flex-direction: column;
-   // margin: $s-size;
    min-height: 100vh;
-   // position: relative;
-   // padding: 0 $l-size;
-   // text-align: center;
    margin: 0 $s-size $s-size $s-size;
-
 
    @media (min-width: $tablet-breakpoint) {
       margin: $l-size $m-size;
    }
 }
 
-.header__content--left {
-
+.header__content--name {
    @media (min-width: $tablet-breakpoint) {
       margin-right: auto;
-      padding: 0 $xl-size;
+      padding: 0 $xxl-size 0 $xxl-size - 10rem;
    }
-
-
-
-
 }
 
-.header__content--right {
-
-
-
+.header__content--title {
    @media (min-width: $tablet-breakpoint) {
       margin-right: auto;
       padding: 0 $xxl-size $xl-size;
    }
-
-
 }

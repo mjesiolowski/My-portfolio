@@ -1,22 +1,32 @@
-* {
+html {
   box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 ::selection {
-  background: #bf5f82;
+  background: $secondary-color;
 }
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  height: 100%; //mobile bcg fix
 }
 
 body {
-
-  font-family: 'Source Sans Pro', sans-serif;
   background: url('../images/bg3.jpg') no-repeat top right fixed;
-
-  // background-color: $white;
   background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100%; //mobile bcg fix
 
+  @supports (-webkit-appearance:none) {
+    .os-android & {
+      min-height: calc(100vh - 56px);
+    }
+  }
 }

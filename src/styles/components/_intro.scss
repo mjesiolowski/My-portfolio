@@ -7,14 +7,6 @@
    }
 }
 
-.intro__container {
-   flex-basis: 100%;
-
-   @media (min-width: $tablet-breakpoint) {
-      flex-basis: 60%;
-   }
-}
-
 .intro__wrapper {
    @include flexbox(center, center);
    align-content: center;
@@ -29,72 +21,11 @@
 }
 
 .intro__photo {
-   // flex-basis: 100%;
-   // justify-self: center;
-
-   background: url('../images/avatar.jpg') no-repeat top center;
+   background: url('../images/avatar.jpg') no-repeat 50% 5%;
    background-size: cover;
-   border: 2px solid transparent;
+   border: 1px solid $transparent-black;
    border-radius: 50%;
    margin: $m-size auto;
    width: 20rem;
    height: 20rem;
-}
-
-.intro__header {
-   flex-basis: 55%;
-
-   @media (min-width: $tablet-breakpoint) {
-      flex-basis: 35%;
-   }
-}
-
-.intro__list {
-   @include flexbox(flex-start, center);
-   flex-basis: 100%;
-   list-style: none;
-   margin: $m-size 0;
-   padding: 0;
-}
-
-.intro__item {
-   flex-basis: 100%;
-   margin: $m-size;
-
-   @media (min-width: $tablet-breakpoint) {
-      flex-basis: 25%;
-   }
-}
-
-.intro__item--link {
-   border: 2px solid $white;
-
-   @media (min-width: $tablet-breakpoint) {
-      flex-basis: 70%;
-   }
-}
-
-// .intro__icon {
-//    font-size: $font-size-xxl;
-
-//    &--link {
-//       margin: $m-size 0;
-//       flex-basis: 100%;
-//    }
-// }
-
-.intro__link {
-   @include flexbox(flex-start, center);
-   color: $white;
-   padding: $m-size;
-   text-decoration: none;
-   transition: .2s;
-
-   @media (min-width: $tablet-breakpoint) {
-      &:hover {
-         color: $transparent-black;
-         background-color: $white;
-
-      }
-   }
 }

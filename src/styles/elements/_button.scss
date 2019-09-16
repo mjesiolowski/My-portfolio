@@ -4,23 +4,19 @@
    color: $white;
    display: block;
    font-size: $font-size-text--desktop;
-   font-weight: 700;
-   letter-spacing: 6px;
+   letter-spacing: .6rem;
    text-align: center;
    text-decoration: none;
-   text-transform: uppercase;
-   transition: background-color .2s;
+   text-transform: lowercase;
+   transition: background-color .3s cubic-bezier(0.05, 1.04, 0.72, 0.98);
    padding: $l-size 0;
-
 
    @media (min-width: $tablet-breakpoint) {
       font-size: $font-size-text--desktop;
       letter-spacing: 5px;
       padding: $l-size;
 
-
       &:hover {
-         // color: $transparent-black;
          background-color: $secondary-color;
       }
    }

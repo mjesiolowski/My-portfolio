@@ -1,62 +1,87 @@
-const Portfolio = {
-   init() {
-      this.desktopBreakpoint = 1000
-      this.projects = document.querySelectorAll('.projects__container')
-      this.footerDate = document.querySelector('.footer__date')
+class Portfolio {
+   constructor() {
       this.header = document.querySelector('.header')
+      this.intro = document.querySelector('.intro')
       this.projects = document.querySelector('.projects')
-      this.navArrow = document.querySelector('.nav-arrow')
+      this.technology = document.querySelector('.technology')
+      this.contact = document.querySelector('.contact')
+
+      this.footerDate = document.querySelector('.footer__date')
+
       this.nav = document.querySelector('.nav')
+      this.navDesktop = document.querySelector('.nav-desktop')
       this.navLinks = document.querySelectorAll('.nav__link')
+      this.navDesktopLinks = document.querySelectorAll('.nav-desktop__link')
+      this.navArrow = document.querySelector('.nav-arrow')
+      this.burger = document.querySelector('.burger')
+   }
+
+   init() {
+      this.setFooterDate()
+
+
+      this.burger.addEventListener('click', () => this.handleDynamicClasses(this.burger, 'toggle', 'burger--active'))
+      this.burger.addEventListener('click', () => this.handleDynamicClasses(this.nav, 'toggle', 'isActive'))
+      this.navLinks.forEach(link => link.addEventListener('click', (e) => this.handleDynamicClasses(this.nav, 'remove', 'isActive')))
+      this.navLinks.forEach(link => link.addEventListener('click', (e) => this.handleDynamicClasses(this.burger, 'remove', 'burger--active')))
 
       document.addEventListener('scroll', () => {
-         const safetyTreshold = 10
+         const scrollTreshold = 200
+         const mobileBreakpoint = 650
 
-         if (this.header.getBoundingClientRect().bottom < 0) {
-            this.navArrow.style.opacity = 1
-            this.nav.style.opacity = 1
-         } else {
-            this.navArrow.style.opacity = 0
-            this.nav.style.opacity = 0
-         }
-
-         this.removeActiveClassFromNav()
-
-         // this.handleNavHighlight(window.scrollY < this.projects.offsetTop, 0)
-         // console.log(window.scrollY, header.offsetTop)
-         // this.handleMenuHighlight(window.scrollY >= catalog.offsetTop && window.scrollY < events.offsetTop, 1)
-         // this.handleMenuHighlight(window.scrollY >= events.offsetTop && window.scrollY < about.offsetTop, 2)
-         // this.handleMenuHighlight(window.scrollY >= about.offsetTop && window.scrollY < contact.offsetTop - (contact.offsetTop / safetyTreshold), 3)
-         // this.handleMenuHighlight(window.scrollY >= contact.offsetTop - (contact.offsetTop / safetyTreshold), 4)
-
+         this.handleElementsVisibility(mobileBreakpoint)
+         this.removeHighlightedClassFromNav()
+         this.handleNavHighlight(window.scrollY >= this.intro.offsetTop && window.scrollY < this.projects.offsetTop - scrollTreshold, 1)
+         this.handleNavHighlight(window.scrollY >= this.projects.offsetTop && window.scrollY < this.technology.offsetTop - scrollTreshold, 0)
+         this.handleNavHighlight(window.scrollY >= this.technology.offsetTop && window.scrollY < this.contact.offsetTop - scrollTreshold, 2)
+         this.handleNavHighlight(window.scrollY >= this.contact.offsetTop - scrollTreshold, 3)
       })
 
-      // this.projects.forEach(project => project.addEventListener('click', (e) => this.toggleVisibility(e, this)))
+      window.addEventListener('resize', (e) => {
+         if (e.target.innerWidth > 650) {
+            this.handleDynamicClasses(this.nav, 'remove', 'isActive')
+            this.handleDynamicClasses(this.burger, 'remove', 'burger--active')
+         }
+      })
+   }
 
-      this.setFooterDate()
-   },
+   handleElementsVisibility(mobileBreakpoint) {
+      if (this.header.getBoundingClientRect().bottom < 0) {
+         this.navArrow.style.opacity = 1
+      }
+
+      if (this.header.getBoundingClientRect().bottom >= 0) {
+         this.navArrow.style.opacity = 0
+         this.navDesktop.style.transform = 'translateY(-100%)'
+      }
+
+      if (window.innerWidth <= mobileBreakpoint) {
+         this.navDesktop.style.transform = 'translateY(-100%)'
+      }
+
+      if (this.header.getBoundingClientRect().bottom < 0 && window.innerWidth > mobileBreakpoint) {
+         this.navDesktop.style.transform = 'translateY(0)'
+      }
+   }
 
    handleNavHighlight(condition, linkPosition) {
       if (condition) {
-         this.navLinks[linkPosition].classList.add('nav__link--active')
+         this.navDesktopLinks[linkPosition].classList.add('nav__link--highlighted')
       }
-   },
+   }
 
-   removeActiveClassFromNav() {
-      this.navLinks.forEach(navLink => navLink.classList.remove('nav__link--active'))
-   },
+   removeHighlightedClassFromNav() {
+      this.navDesktopLinks.forEach(navLink => navLink.classList.remove('nav__link--highlighted'))
+   }
 
-   toggleVisibility(e) {
-      if (window.innerWidth < this.desktopBreakpoint && e.target.nodeName === 'DIV') {
-         const children = [...e.target.children]
-         children.forEach(child => child.classList.toggle('not-visible'))
-         e.target.classList.toggle('backgroundToggler')
-      }
-   },
+   handleDynamicClasses(element, action, className) {
+      element.classList[action](className)
+   }
 
    setFooterDate() {
       this.footerDate.textContent = new Date().getFullYear()
    }
 }
 
-Portfolio.init()
+const app = new Portfolio()
+app.init()

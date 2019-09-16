@@ -1,22 +1,20 @@
 .nav-arrow {
-  display: block;
-  color: $white;
-  border: 2px solid $secondary-color;
-  // @include basicBoxStyle();
-
+  background-color: $black;
+  border: 1px solid $secondary-color;
   bottom: 10px;
+  color: $white;
+  display: block;
   font-size: $font-size-subtitle;
   opacity: 0;
   padding: $s-size;
   position: fixed;
   right: 10px;
-  transition: opacity .3s;
+  transition: all .3s cubic-bezier(0.05, 1.04, 0.72, 0.98);
 
   @media (min-width: $tablet-breakpoint) {
     &:hover {
-      border: 2px solid $white;
+      border: 1px solid $white;
       color: $secondary-color;
     }
   }
-
 }

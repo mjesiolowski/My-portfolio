@@ -1,22 +1,20 @@
 // Colors
-$transparent-black: rgba(20, 20, 20, .85);
-// $transparent-white: rgba(239, 232, 232, .5);
-$white: rgb(239, 232, 232);
 $black: rgb(20, 20, 20);
-$secondary-color: #bf5f82;
+$secondary-color: #29b6f6;
+$transparent-black: rgba(20, 20, 20, .92);
+$white: rgb(239, 232, 232);
 
 // Font Size
 $font-size-header: 5.0rem;
 $font-size-header--desktop: 9.0rem;
 $font-size-subheader: 3.5rem;
 $font-size-subheader--desktop: 7.0rem;
-$font-size-title: 3.5rem;
+$font-size-title: 3.2rem;
 $font-size-title--desktop: 5.0rem;
 $font-size-subtitle: 2rem;
 $font-size-subtitle--desktop: 3.5rem;
 $font-size-text: 1.8rem;
 $font-size-text--desktop: 2.3rem;
-
 
 // Spacing
 $xxl-size: 45.0rem;
@@ -30,40 +28,9 @@ $tablet-breakpoint: 650px;
 $desktop-breakpoint: 1000px;
 
 // Mixins
-@mixin basicBoxStyle() {
-   background-color: $transparent-black;
-   box-shadow: 0 0 6px 3px white;
-   border: 3px solid white;
-   color: $white;
-}
-
 @mixin flexbox($align: flex-start, $justify: flex-start) {
    display: flex;
    flex-wrap: wrap;
    align-items: $align;
    justify-content: $justify
-}
-
-@mixin project-hover() {
-   @media (min-width: $desktop-breakpoint) {
-      &:hover {
-         background-color: $transparent-black;
-      }
-
-      &:hover .projects__header {
-         opacity: 1;
-      }
-
-      &:hover .projects__text {
-         opacity: 1;
-      }
-
-      &:hover .projects__link {
-         opacity: 1;
-      }
-
-      &:hover .projects__background {
-         background-color: $transparent-black;
-      }
-   }
 }

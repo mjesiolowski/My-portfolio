@@ -1,27 +1,32 @@
 .title {
-   color: $white;
+   color: $secondary-color;
    font-size: $font-size-title;
-   letter-spacing: .15rem;
-   // text-transform: uppercase;
+   letter-spacing: .2rem;
    margin: $m-size 0;
    text-align: center;
+   text-transform: uppercase;
    width: 100%;
 
    &--main {
+      color: $white;
       font-size: $font-size-header;
-      letter-spacing: .3rem;
+      letter-spacing: .5rem;
       text-align: left;
+      text-transform: lowercase;
    }
 
    &::first-letter {
       color: $secondary-color;
    }
 
+   &::selection {
+      background: $white;
+   }
+
    @media (min-width: $tablet-breakpoint) {
       font-size: $font-size-title--desktop;
 
       &--main {
-         letter-spacing: .6rem;
          font-size: $font-size-header--desktop;
       }
    }
