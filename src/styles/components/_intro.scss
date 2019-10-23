@@ -1,31 +1,31 @@
 .intro {
-   @include flexbox(center, space-around);
-   margin: 0 $s-size $s-size $s-size;
+  @include flexbox(center, space-around);
+  margin: 0 $s-size $s-size $s-size;
 
-   @media (min-width: $tablet-breakpoint) {
-      margin: $l-size $m-size;
-   }
+  @media (min-width: $tablet-breakpoint) {
+    margin: $l-size $m-size;
+  }
 }
 
 .intro__wrapper {
-   @include flexbox(center, center);
-   align-content: center;
-   flex-basis: 100%;
-   min-height: 100vh;
-   min-width: 30rem;
+  @include flexbox(center, center);
+  align-content: center;
+  flex-basis: 100%;
+  min-height: 100vh;
+  min-width: 30rem;
 
-   @media (min-width: $desktop-breakpoint) {
-      @include flexbox(center, flex-start);
-      flex-basis: 60%;
-   }
+  @media (min-width: $desktop-breakpoint) {
+    @include flexbox(center, flex-start);
+    flex-basis: 60%;
+  }
 }
 
 .intro__photo {
-   background: url('../images/avatar.jpg') no-repeat 50% 5%;
-   background-size: cover;
-   border: 1px solid $transparent-black;
-   border-radius: 50%;
-   margin: $m-size auto;
-   width: 20rem;
-   height: 20rem;
+  background: url('../images/mj2.jpg') no-repeat 50% 5%;
+  background-size: cover;
+  border: 1px solid $transparent-black;
+  border-radius: 50%;
+  margin: $m-size auto;
+  width: 20rem;
+  height: 20rem;
 }
