@@ -1,0 +1,31 @@
+.experience {
+  @extend .technology;
+}
+
+.experience__wrapper {
+  @extend .technology__wrapper;
+}
+
+.experience__list {
+  @extend .technology__list;
+}
+
+.experience__item {
+  @extend .technology__item;
+  @media (min-width: $tablet-breakpoint) {
+    flex-basis: 100%;
+  }
+}
+
+.experience__icon {
+  @extend .technology__icon;
+}
+
+.experience__subtitile {
+  @extend .projects__subtitle;
+}
+
+.experience__text {
+  @extend .text;
+  text-align: center;
+}

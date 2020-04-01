@@ -2,6 +2,7 @@ class Portfolio {
    constructor() {
       this.header = document.querySelector('.header')
       this.intro = document.querySelector('.intro')
+      this.experience = document.querySelector('.experience')
       this.projects = document.querySelector('.projects')
       this.technology = document.querySelector('.technology')
       this.contact = document.querySelector('.contact')
@@ -31,10 +32,11 @@ class Portfolio {
 
          this.handleElementsVisibility(mobileBreakpoint)
          this.removeHighlightedClassFromNav()
-         this.handleNavHighlight(window.scrollY >= this.intro.offsetTop && window.scrollY < this.projects.offsetTop - scrollTreshold, 1)
-         this.handleNavHighlight(window.scrollY >= this.projects.offsetTop && window.scrollY < this.technology.offsetTop - scrollTreshold, 0)
-         this.handleNavHighlight(window.scrollY >= this.technology.offsetTop && window.scrollY < this.contact.offsetTop - scrollTreshold, 2)
-         this.handleNavHighlight(window.scrollY >= this.contact.offsetTop - scrollTreshold, 3)
+         this.handleNavHighlight(window.scrollY >= this.intro.offsetTop && window.scrollY < this.experience.offsetTop - scrollTreshold, 2)
+         this.handleNavHighlight(window.scrollY >= this.experience.offsetTop && window.scrollY < this.projects.offsetTop - scrollTreshold, 0)
+         this.handleNavHighlight(window.scrollY >= this.projects.offsetTop && window.scrollY < this.technology.offsetTop - scrollTreshold, 1)
+         this.handleNavHighlight(window.scrollY >= this.technology.offsetTop && window.scrollY < this.contact.offsetTop - scrollTreshold, 3)
+         this.handleNavHighlight(window.scrollY >= this.contact.offsetTop - scrollTreshold, 4)
       })
 
       window.addEventListener('resize', (e) => {
