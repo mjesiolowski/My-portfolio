@@ -1,5 +1,5 @@
 # My portfolio
-mj-portfolio-page.herokuapp.com/
+[LINK](mj-portfolio-page.herokuapp.com/)
 
 ## info
 My goal was to create portfolio with efficient, minimalistic and user-friendly interface. I placed all the information on a single page.
